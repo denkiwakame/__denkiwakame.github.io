@@ -26,6 +26,9 @@ jobs:
         run: |
           yarn export
           touch out/.nojekyll
+        env:
+          NOTION_TOKEN: ${{secrets.NOTION_TOKEN}}
+          BLOG_INDEX_ID: ${{secrets.BLOG_INDEX_ID}}
       - name: deploy
         uses: peaceiris/actions-gh-pages@v3
         env:
