@@ -34,6 +34,7 @@ const contacts = [
 
 export default () => (
   <div className={sharedStyles.layout}>
+    <h1>Mai Nishimura</h1>
     <div className={contactStyles.links}>
       {contacts.map(({ Comp, link, alt }) => {
         return (
