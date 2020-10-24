@@ -13,9 +13,8 @@ export default () => (
   <>
     <Header titlePre="ABOUT" />
     <div className={sharedStyles.layout}>
-      <Contact />
-
       <div className="explanation">
+        <Contact />
         <Education />
         <Experiences />
         <Publications />

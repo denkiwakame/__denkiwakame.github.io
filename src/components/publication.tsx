@@ -7,7 +7,7 @@ const papers = [
     title:
       'L2B: Learning to Balance the Safety-Efficiency Trade-off in Interactive Crowd-aware Robot Navigation',
     journal:
-      'IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)',
+      'International Conference on Intelligent Robots and Systems (IROS)',
     year: '2020',
     links: {
       paper: 'https://arxiv.org/abs/2003.09207',
