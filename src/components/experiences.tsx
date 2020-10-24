@@ -38,14 +38,14 @@ const degrees = [
     institute: 'IBM Tokyo Research Laboratory',
     country: 'Japan',
     desc: 'Research on low-resolution traffic image monitoring',
-    year: '2013-2015',
+    year: '2013 Aug.-2013 Sep.',
   },
   {
     jobtitle: 'Software Engineer Intern',
     institute: 'Google',
     country: 'Japan',
     desc: 'Porting image APIs for Natiev Client project at Chrome Team.',
-    year: '2013-2015',
+    year: '2012 Aug.-2012 Sep.',
   },
 ]
 
