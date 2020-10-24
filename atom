@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <feed xmlns="http://www.w3.org/2005/Atom">
+    <title>My Blog</title>
+    <subtitle>Blog</subtitle>
+    <link href="/atom" rel="self" type="application/rss+xml"/>
+    <link href="/" />
+    <updated>2020-10-24T19:22:54.492Z</updated>
+    <id>My Notion Blog</id>
+  </feed>
