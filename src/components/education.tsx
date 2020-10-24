@@ -28,7 +28,7 @@ export default () => (
       <h2>Education</h2>
       {degrees.map(({ title, university, country, year }) => {
         return (
-          <div class="row">
+          <div class={sharedStyles.row}>
             <p>
               <b class="highlight-blue">{title}</b>,<span> at </span>
               <b>{university}</b>

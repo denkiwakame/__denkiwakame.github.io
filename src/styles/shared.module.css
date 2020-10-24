@@ -22,5 +22,8 @@
 
 .layout p {
   margin-top: 2px;
-  margin-bottom: 2px;
+}
+
+.row {
+  margin-top: 10px;
 }

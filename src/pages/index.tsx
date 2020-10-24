@@ -6,6 +6,7 @@ import Contact from '../components/contact'
 import GitHub from '../components/svgs/github'
 import sharedStyles from '../styles/shared.module.css'
 import Education from '../components/education'
+import Experiences from '../components/experiences'
 
 export default () => (
   <>
@@ -15,60 +16,7 @@ export default () => (
 
       <div className="explanation">
         <Education />
-        <div class="container">
-          <h2>Working Experiences</h2>
-          <p>
-            <b class="highlight-blue">Research Engineer</b> at{' '}
-            <b>OMRON SINIC X</b>, Japan,{' '}
-            <span class="highlight-red">2019-present</span>
-            <br />
-            <span class="highlight-gray">
-              Mobile robot navigaion and GPU-accelerated Machine Learning
-            </span>
-            <br />
-          </p>
-          <p>
-            <b class="highlight-blue">Senior Software Engineer</b> at{' '}
-            <b>Fixstars</b>, Japan, <span class="highlight-red">2017-2019</span>
-            <br />
-            <span class="highlight-gray">
-              CUDA/SIMD-powered computer vision algorithms for embedded systems
-            </span>
-          </p>
-          <p>
-            <b class="highlight-blue">Researcher</b> at <b>NTT Labs</b>, Japan,{' '}
-            <span class="highlight-red">2015-2017</span>
-            <br />
-            <span class="highlight-gray">
-              MRF optimization, large-scale graph processing
-            </span>
-          </p>
-          <p>
-            <b class="highlight-blue">Part-time Engineer</b> at <b>Hatena</b>,
-            Japan, <span class="highlight-red">2013-2015</span>
-            <br />
-            <span class="highlight-gray">
-              Backend/Frontend web application engineer at Hatena Blog Team
-            </span>
-          </p>
-          <p>
-            <b class="highlight-blue">Research Intern</b> at{' '}
-            <b>IBM Tokyo Research Laboratory</b>, Japan,{' '}
-            <span class="highlight-red">2013</span>
-            <br />
-            <span class="highlight-gray">
-              Frugal traffic monitoring project
-            </span>
-          </p>
-          <p>
-            <b class="highlight-blue">Software Engineer Intern (BOLD)</b> at{' '}
-            <b>Google</b>, Japan, <span class="highlight-red">2012</span>
-            <br />
-            <span class="highlight-gray">
-              Native Client project at Chrome Team
-            </span>
-          </p>
-        </div>
+        <Experiences />
         <div class="container">
           <h2>Publications</h2>
           <p>
