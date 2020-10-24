@@ -20,6 +20,8 @@ jobs:
           yarn build
         env:
           GITHUB_PAGES: true
+          NOTION_TOKEN: ${{secrets.NOTION_TOKEN}}
+          BLOG_INDEX_ID: ${{secrets.BLOG_INDEX_ID}}
       - name: export
         run: |
           yarn export
