@@ -4,20 +4,23 @@
   --gap: 1rem;
   --gap-double: 2rem;
 
-  --bg: #fff;
-  --fg: #000;
-  --accents-1: #111;
-  --accents-2: #333;
-  --accents-3: #888;
+  --bg: #282828;
+  --fg: #a89883;
+  --accents-1: #d76035;
+  --accents-2: #4d8b8a;
+  --accents-3: #837486;
   --geist-foreground: #000;
 
   --radius: 8px;
 
-  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  --font-sans: 'Ubuntu', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   --font-mono: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
+
+  --fg-1: #96897b;
+  --fg-2: #fdf4c1;
 }
 
 * {
@@ -28,18 +31,18 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 body {
   min-height: 100vh;
   background: var(--bg);
   color: var(--fg);
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Ubuntu Mono, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
-  background-image: radial-gradient(#ddd 1px, transparent 1px),
-    radial-gradient(#ddd 1px, transparent 1px);
+  /* background-image: radial-gradient(#ddd 1px, transparent 1px), */
+  /*   radial-gradient(#ddd 1px, transparent 1px);                 */
   background-position: 0 0, 25px 25px;
   background-attachment: fixed;
   background-size: 50px 50px;
@@ -252,11 +255,11 @@ figure {
 }
 
 a {
-  color: #0070f3;
+  color: var(--accents-1);
   text-decoration: none;
 }
 a:hover {
-  color: #3291ff;
+  color: var(--accents-1);
 }
 
 .links {
@@ -279,14 +282,14 @@ mark {
 
 h1 {
   margin: var(--gap-double) 0 calc(0.5 * var(--gap)) 0;
-  font-size: 2.25rem;
+  font-size: 1.8rem;
   font-weight: 800;
   letter-spacing: -0.05rem;
 }
 
 h2 {
-  font-weight: 300;
-  font-size: 1.25rem;
+  font-size: 1.6rem;
+  font-weight: 800;
   letter-spacing: -0.02rem;
   color: var(--accents-3);
 }
@@ -306,7 +309,7 @@ h2 {
 }
 
 p {
-  color: #555;
+  color: var(--fg-2);
   font-weight: 400;
   font-size: 0.94rem;
   line-height: 1.7;
@@ -342,7 +345,7 @@ code {
   transform: skew(-20deg);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .explanation {
     padding: 0 1rem 4rem;
   }
@@ -373,4 +376,26 @@ footer span:nth-child(3) {
 
 footer span:nth-child(3) a {
   color: inherit;
+}
+
+.highlight-red {
+  color: var(--accents-1);
+}
+.highlight-blue {
+  color: var(--accents-2);
+}
+.highlight-gray {
+  color: var(--fg-1);
+}
+.highlight {
+  font-weight: bolder;
+  color: var(--fg-2);
+  /* background-color: var(--fg-2); */
+}
+.container {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.footer {
+  font-size: 0.8em;
 }

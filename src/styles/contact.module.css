@@ -13,6 +13,10 @@
   transition: opacity 200ms ease;
 }
 
+.links svg {
+  fill: #4d8b8a;
+}
+
 .links a:hover {
   opacity: 0.6;
 }
