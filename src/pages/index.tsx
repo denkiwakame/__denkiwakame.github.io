@@ -2,35 +2,19 @@ import Link from 'next/link'
 import Header from '../components/header'
 import ExtLink from '../components/ext-link'
 import Features from '../components/features'
-import Contact from '../components/sns'
+import Contact from '../components/contact'
 import GitHub from '../components/svgs/github'
 import sharedStyles from '../styles/shared.module.css'
+import Education from '../components/education'
 
 export default () => (
   <>
     <Header titlePre="ABOUT" />
     <div className={sharedStyles.layout}>
-      <h1>Mai Nishimura</h1>
       <Contact />
 
       <div className="explanation">
-        <div class="container">
-          <h2>Education</h2>
-          <p>
-            <b class="highlight-blue">Ph.D. candidate</b> at{' '}
-            <b>Kyoto University</b>, Japan,{' '}
-            <span class="highlight-red">2020-present</span>
-            <br />
-            <b class="highlight-blue">M.E.</b> in informatics at{' '}
-            <b>Kyoto University</b>, Japan,{' '}
-            <span class="highlight-red">2013-2015</span>
-            <br />
-            <b class="highlight-blue">B.E.</b> in Electrical and Electronic
-            Engineering at <b>Kyoto University</b>, Japan,{' '}
-            <span class="highlight-red">2009-2013</span>
-            <br />
-          </p>
-        </div>
+        <Education />
         <div class="container">
           <h2>Working Experiences</h2>
           <p>

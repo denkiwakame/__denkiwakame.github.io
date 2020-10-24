@@ -5,7 +5,22 @@
   height: auto;
 }
 
+.layout {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 1rem;
+  max-width: 100vw;
+  /* padding: 0 2rem; */
+  background: var(--bg);
+  margin: var(--gap-half) auto;
+}
+
 .layout h1,
 .layout h2 {
   text-align: center;
+}
+
+.layout p {
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
