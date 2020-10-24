@@ -55,15 +55,15 @@ export default () => (
       <h2>Working Experiences</h2>
       {degrees.map(({ jobtitle, institute, country, year, desc }) => {
         return (
-          <div class={sharedStyles.row}>
+          <div className={sharedStyles.row}>
             <p>
-              <b class="highlight-blue">{jobtitle}</b>
+              <b className="highlight-blue">{jobtitle}</b>
               <span> at </span>
               <b>{institute}</b>
               <span>, {country}, </span>
-              <span class="highlight-red">{year}</span>
+              <span className="highlight-red">{year}</span>
               <br />
-              <span class="highlight-gray">{desc}</span>
+              <span className="highlight-gray">{desc}</span>
             </p>
           </div>
         )

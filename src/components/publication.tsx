@@ -70,13 +70,13 @@ export default () => (
       <h2>Publications</h2>
       {papers.map(({ authors, title, journal, year, links }) => {
         return (
-          <div class={sharedStyles.pub}>
+          <div className={sharedStyles.pub}>
             <p>
-              <span class="highlight-gray">
+              <span className="highlight-gray">
                 {authors.map(author => {
                   return author == 'Mai Nishimura' ? (
                     <span>
-                      <b class="highlight-blue">
+                      <b className="highlight-blue">
                         <u>{author}</u>
                       </b>
                       ,{' '}
@@ -89,13 +89,13 @@ export default () => (
               <br />
               <b>{title}</b>
               <br />
-              <span class="highlight-red">
+              <span className="highlight-red">
                 {journal}, {year}
               </span>
               <br />
               {Object.entries(links).map(([key, val]) => {
                 return (
-                  <a href={val} target="_blank" class="highlight">
+                  <a href={val} target="_blank" className="highlight">
                     [{key}]{' '}
                   </a>
                 )
