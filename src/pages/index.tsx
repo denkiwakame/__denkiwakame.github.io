@@ -12,13 +12,11 @@ import Publications from '../components/publication'
 export default () => (
   <>
     <Header titlePre="ABOUT" />
-    <div className={sharedStyles.layout}>
-      <div className="explanation">
-        <Contact />
-        <Education />
-        <Experiences />
-        <Publications />
-      </div>
+    <div className="explanation">
+      <Contact />
+      <Education />
+      <Experiences />
+      <Publications />
     </div>
   </>
 )

@@ -35,9 +35,6 @@ const contacts = [
 export default () => (
   <div className={sharedStyles.layout}>
     <h1>Mai Nishimura</h1>
-    <h4 className="highlight-gray">
-      Computer Vision, GPGPU, Web Application, Vim
-    </h4>
     <div className={contactStyles.links}>
       {contacts.map(({ Comp, link, alt }) => {
         return (
