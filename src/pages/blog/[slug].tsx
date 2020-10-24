@@ -71,13 +71,14 @@ export async function getStaticProps({ params: { slug }, preview }) {
 // Return our list of blog posts to prerender
 export async function getStaticPaths() {
   const postsTable = await getBlogIndex()
+  // disable fallback for static page
   // we fallback for any unpublished posts to save build time
   // for actually published ones
   return {
     paths: Object.keys(postsTable)
       .filter(post => postsTable[post].Published === 'Yes')
       .map(slug => getBlogLink(slug)),
-    fallback: true,
+    fallback: false,
   }
 }
 
