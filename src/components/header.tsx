@@ -27,6 +27,13 @@ export default ({ titlePre = '' }) => {
           content="Mai Nishimura - a Research Engineer"
         />
         <meta name="twitter:image" content={ogImageUrl} />
+        <meta name="twitter:title" content="ABOUT | Mai Nishimura" />
+        <meta
+          name="twitter:description"
+          content="Computer Vision, GPGPU, Web applications, and Vim"
+        />
+        <meta name="twitter:url" content="https://denkiwakame.github.io" />
+        <meta name="twitter:site" content="@denkiwakame" />
       </Head>
       <ul>
         {navItems.map(({ label, page, link }) => (
