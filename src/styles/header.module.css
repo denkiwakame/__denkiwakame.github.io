@@ -22,8 +22,7 @@
 }
 
 .header :global(a.active) {
-  /*  color: #d76035; */
-  color: #4d8b8a;
+  color: var(--accents-1);
   font-weight: 600;
 }
 

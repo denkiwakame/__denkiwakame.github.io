@@ -14,7 +14,7 @@
 }
 
 .links svg {
-  fill: #4d8b8a;
+  fill: var(--fg-2);
 }
 
 .links a:hover {

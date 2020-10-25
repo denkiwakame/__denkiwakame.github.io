@@ -23,6 +23,8 @@
 
   --fg-1: #96897b;
   --fg-2: #fdf4c1;
+
+  --mobile-font-size: 12px;
 }
 
 * {
@@ -357,16 +359,13 @@ code {
     letter-spacing: 0;
   }
   b {
-    font-size: 12px;
+    font-size: var(--mobile-font-size);
   }
   span {
-    font-size: 12px;
+    font-size: var(--mobile-font-size);
   }
   a {
-    font-size: 12px;
-  }
-  .footer {
-    font-size: 12px;
+    font-size: var(--mobile-font-size);
   }
 }
 
@@ -375,6 +374,7 @@ code {
 }
 
 footer {
+  font-size: 0.7em;
   padding: 2em 0;
   text-align: center;
 }
@@ -405,11 +405,4 @@ footer span:nth-child(3) a {
   font-weight: bolder;
   color: var(--fg-2);
   /* background-color: var(--fg-2); */
-}
-.container {
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-.footer {
-  font-size: 0.6em;
 }
