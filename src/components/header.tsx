@@ -18,22 +18,16 @@ export default ({ titlePre = '' }) => {
     <header className={styles.header}>
       <Head>
         <title>{titlePre ? `${titlePre} |` : ''} Mai Nishimura</title>
-        <meta name="description" content="Mai Nishimura, a research engineer" />
+        <meta
+          name="description"
+          content="Computer Vision, GPGPU, Web applications, and Vim"
+        />
         <meta name="og:title" content="Mai Nishimura" />
         <meta property="og:image" content={ogImageUrl} />
         <meta name="twitter:site" content="@denkiwakame" />
-        <meta
-          name="twitter:card"
-          content="Mai Nishimura - a Research Engineer"
-        />
-        <meta name="twitter:image" content={ogImageUrl} />
-        <meta name="twitter:title" content="ABOUT | Mai Nishimura" />
-        <meta
-          name="twitter:description"
-          content="Computer Vision, GPGPU, Web applications, and Vim"
-        />
+        <meta name="twitter:creator" content="@denkiwakame" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://denkiwakame.github.io" />
-        <meta name="twitter:site" content="@denkiwakame" />
       </Head>
       <ul>
         {navItems.map(({ label, page, link }) => (
