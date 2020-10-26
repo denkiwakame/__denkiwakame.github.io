@@ -7,10 +7,17 @@
   --gap-double: 2rem;
 
   --bg: #282828;
+  --bg-2: #323232;
+  --bg-3: #646464;
   --fg: #a89883;
   --accents-1: #d76035;
   --accents-2: #4d8b8a;
   --accents-3: #837486;
+  --accents-4: #b8bb26;
+  --accents-5: #fabd2f;
+  --accents-6: #83a598;
+  --accents-7: #87af87;
+  --accents-8: #af5f5f;
   --geist-foreground: #000;
 
   --radius: 8px;
@@ -57,7 +64,7 @@ body {
 
 code[class*='language-'],
 pre[class*='language-'] {
-  color: #000;
+  color: var(--fg-2);
   text-align: left;
   white-space: pre;
   word-spacing: normal;
@@ -71,25 +78,26 @@ pre[class*='language-'] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: #999;
+  color: var(--fg-1);
 }
 .token.namespace {
   opacity: 0.7;
+  color: var(--accents-4);
 }
 .token.string,
 .token.attr-value {
-  color: #028265;
+  color: var(--accents-5);
 }
 .token.punctuation,
 .token.operator {
-  color: #000;
+  color: var(--accents-3);
 }
 .token.url,
 .token.symbol,
 .token.boolean,
 .token.variable,
 .token.constant {
-  color: #36acaa;
+  color: var(--accents-2);
 }
 .token.atrule,
 .language-autohotkey .token.selector,
@@ -101,7 +109,7 @@ code[class*='language-css'] {
   color: var(--geist-success);
 }
 .token.keyword {
-  color: #ff0078;
+  color: var(--accents-1);
   font-weight: bolder;
 }
 .token.function,
@@ -116,7 +124,7 @@ code[class*='language-css'] {
 }
 .token.selector,
 .language-autohotkey .token.keyword {
-  color: #00009f;
+  color: var(--accents-2);
 }
 .token.important,
 .token.bold {
@@ -298,6 +306,10 @@ h2 {
   color: var(--accents-3);
 }
 
+h3 {
+  color: var(--fg-1);
+}
+
 .video {
   width: 1080px;
   max-width: calc(100vw - 40px);
@@ -315,8 +327,8 @@ h2 {
 p {
   color: var(--fg-2);
   font-weight: 400;
-  font-size: 0.94rem;
-  line-height: 1.7;
+  font-size: 0.8rem;
+  line-height: 1.2;
 }
 pre {
   white-space: pre;
@@ -325,13 +337,27 @@ pre :global(code) {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
+::-webkit-scrollbar {
+  width: 2px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-2);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-3);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bg-3);
+}
 
 code {
-  font-size: 0.8rem;
-  background: #f1f1f1;
+  font-size: 0.75rem;
+  background: var(--bg-2);
   padding: 0.2rem;
   border-radius: var(--radius);
   font-family: var(--font-mono);
+  color: var(--accents-2);
 }
 
 .slice {
@@ -356,6 +382,10 @@ code {
 
   h2 {
     font-size: 1.3rem;
+    letter-spacing: 0;
+  }
+  h3 {
+    font-size: 1.2rem;
     letter-spacing: 0;
   }
   b {
