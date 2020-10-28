@@ -26,8 +26,10 @@ const Code = ({ children, language = 'javascript' }) => {
           display: block;
           padding: 0.8rem;
           line-height: 1.5;
-          background: #f5f5f5;
-          font-size: 0.75rem;
+          color: var(--fg-2);
+          background: var(--bg-2);
+          border-color: var(--bg-2);
+          font-size: 0.65rem;
           border-radius: var(--radius);
         }
       `}</style>

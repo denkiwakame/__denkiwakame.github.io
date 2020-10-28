@@ -1,23 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap');
+
 :root {
   --gap-quarter: 0.25rem;
   --gap-half: 0.5rem;
   --gap: 1rem;
   --gap-double: 2rem;
 
-  --bg: #fff;
-  --fg: #000;
-  --accents-1: #111;
-  --accents-2: #333;
-  --accents-3: #888;
+  --bg: #282828;
+  --bg-2: #323232;
+  --bg-3: #646464;
+  --fg: #a89883;
+  --accents-1: #d76035;
+  --accents-2: #4d8b8a;
+  --accents-3: #837486;
+  --accents-4: #b8bb26;
+  --accents-5: #fabd2f;
+  --accents-6: #83a598;
+  --accents-7: #87af87;
+  --accents-8: #af5f5f;
   --geist-foreground: #000;
 
   --radius: 8px;
 
-  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  --font-sans: 'Ubuntu', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   --font-mono: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
+
+  --fg-1: #96897b;
+  --fg-2: #fdf4c1;
+
+  --blog-font-size: 0.8rem;
+  --mobile-font-size: 12px;
 }
 
 * {
@@ -28,18 +43,18 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 body {
   min-height: 100vh;
   background: var(--bg);
   color: var(--fg);
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Ubuntu Mono, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
-  background-image: radial-gradient(#ddd 1px, transparent 1px),
-    radial-gradient(#ddd 1px, transparent 1px);
+  /* background-image: radial-gradient(#ddd 1px, transparent 1px), */
+  /*   radial-gradient(#ddd 1px, transparent 1px);                 */
   background-position: 0 0, 25px 25px;
   background-attachment: fixed;
   background-size: 50px 50px;
@@ -50,12 +65,11 @@ body {
 
 code[class*='language-'],
 pre[class*='language-'] {
-  color: #000;
+  color: var(--fg-2);
   text-align: left;
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
-  font-size: 0.95em;
   line-height: 1.4em;
   tab-size: 4;
   hyphens: none;
@@ -64,25 +78,26 @@ pre[class*='language-'] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: #999;
+  color: var(--fg-1);
 }
 .token.namespace {
   opacity: 0.7;
+  color: var(--accents-4);
 }
 .token.string,
 .token.attr-value {
-  color: #028265;
+  color: var(--accents-5);
 }
 .token.punctuation,
 .token.operator {
-  color: #000;
+  color: var(--accents-3);
 }
 .token.url,
 .token.symbol,
 .token.boolean,
 .token.variable,
 .token.constant {
-  color: #36acaa;
+  color: var(--accents-2);
 }
 .token.atrule,
 .language-autohotkey .token.selector,
@@ -94,7 +109,7 @@ code[class*='language-css'] {
   color: var(--geist-success);
 }
 .token.keyword {
-  color: #ff0078;
+  color: var(--accents-1);
   font-weight: bolder;
 }
 .token.function,
@@ -109,7 +124,7 @@ code[class*='language-css'] {
 }
 .token.selector,
 .language-autohotkey .token.keyword {
-  color: #00009f;
+  color: var(--accents-2);
 }
 .token.important,
 .token.bold {
@@ -234,29 +249,24 @@ pre.dark[class*='language-'] {
 
 .explanation {
   font-size: 1rem;
-  width: 35rem;
+  width: 45rem;
   max-width: 100vw;
   padding: 0 2rem;
   background: var(--bg);
   margin: var(--gap-half) auto;
 }
 figure {
-  font-size: 0.85rem;
+  font-size: var(--blog-font-size);
   color: #999;
   line-height: 1.8;
 }
 
-figure {
-  font-size: 0.85rem;
-  color: #999;
-}
-
 a {
-  color: #0070f3;
+  color: var(--accents-1);
   text-decoration: none;
 }
 a:hover {
-  color: #3291ff;
+  color: var(--accents-1);
 }
 
 .links {
@@ -279,16 +289,20 @@ mark {
 
 h1 {
   margin: var(--gap-double) 0 calc(0.5 * var(--gap)) 0;
-  font-size: 2.25rem;
+  font-size: 1.8rem;
   font-weight: 800;
   letter-spacing: -0.05rem;
 }
 
 h2 {
-  font-weight: 300;
-  font-size: 1.25rem;
+  font-size: 1.6rem;
+  font-weight: 800;
   letter-spacing: -0.02rem;
   color: var(--accents-3);
+}
+
+h3 {
+  color: var(--fg-1);
 }
 
 .video {
@@ -306,10 +320,10 @@ h2 {
 }
 
 p {
-  color: #555;
+  color: var(--fg-2);
   font-weight: 400;
-  font-size: 0.94rem;
-  line-height: 1.7;
+  font-size: var(--blog-font-size);
+  line-height: 1.2;
 }
 pre {
   white-space: pre;
@@ -318,13 +332,27 @@ pre :global(code) {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
+::-webkit-scrollbar {
+  width: 2px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-2);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-3);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bg-3);
+}
 
 code {
-  font-size: 0.8rem;
-  background: #f1f1f1;
+  font-size: 0.75rem;
+  background: var(--bg-2);
   padding: 0.2rem;
   border-radius: var(--radius);
   font-family: var(--font-mono);
+  color: var(--accents-2);
 }
 
 .slice {
@@ -342,14 +370,27 @@ code {
   transform: skew(-20deg);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .explanation {
-    padding: 0 1rem 4rem;
+    padding: 0 1rem 1rem;
   }
 
   h2 {
-    font-size: 0.95rem;
+    font-size: 1.3rem;
     letter-spacing: 0;
+  }
+  h3 {
+    font-size: 1.2rem;
+    letter-spacing: 0;
+  }
+  b {
+    font-size: var(--mobile-font-size);
+  }
+  span {
+    font-size: var(--mobile-font-size);
+  }
+  a {
+    font-size: var(--mobile-font-size);
   }
 }
 
@@ -358,6 +399,7 @@ code {
 }
 
 footer {
+  font-size: 0.7em;
   padding: 2em 0;
   text-align: center;
 }
@@ -373,4 +415,19 @@ footer span:nth-child(3) {
 
 footer span:nth-child(3) a {
   color: inherit;
+}
+
+.highlight-red {
+  color: var(--accents-1);
+}
+.highlight-blue {
+  color: var(--accents-2);
+}
+.highlight-gray {
+  color: var(--fg-1);
+}
+.highlight {
+  font-weight: bolder;
+  color: var(--fg-2);
+  /* background-color: var(--fg-2); */
 }

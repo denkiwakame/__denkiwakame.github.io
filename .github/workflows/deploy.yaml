@@ -1,0 +1,36 @@
+name: deploy
+on:
+  push:
+    branches:
+      - master
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js 12
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: install
+        run: |
+          yarn install
+      - name: build
+        run: |
+          yarn build
+        env:
+          GITHUB_PAGES: true
+          NOTION_TOKEN: ${{secrets.NOTION_TOKEN}}
+          BLOG_INDEX_ID: ${{secrets.BLOG_INDEX_ID}}
+      - name: export
+        run: |
+          yarn export
+          touch out/.nojekyll
+        env:
+          NOTION_TOKEN: ${{secrets.NOTION_TOKEN}}
+          BLOG_INDEX_ID: ${{secrets.BLOG_INDEX_ID}}
+      - name: deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+          PUBLISH_DIR: ./out

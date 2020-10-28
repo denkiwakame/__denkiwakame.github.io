@@ -74,6 +74,7 @@
 
 .postPreview h3,
 .post h1 {
+  color: var(--accents-1);
   margin-bottom: 0;
 }
 
@@ -87,9 +88,17 @@
 }
 
 .post :global(video),
-.post :global(img),
 .post :global(.asset-wrapper) {
-  margin: 2rem auto;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
+  max-width: 100%;
+  display: block;
+}
+
+.post :global(img) {
+  margin: 0;
+  padding: 0;
   box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
   max-width: 100%;
   display: block;
@@ -130,9 +139,32 @@
 }
 
 .post :global(hr) {
+  border: 0;
   margin-bottom: 2em;
+  background-color: var(--fg-1);
+  color: var(--fg-1);
+  border: none;
+  height: 1.5px;
 }
 
 .post :global(a + p) {
   margin-top: 0;
+  font-size: 0.8rem;
+}
+
+.share :global(div) {
+  text-align: right;
+  margin: 20px;
+}
+
+.post :global(li) {
+  color: var(--fg-2);
+  font-size: 0.75rem;
+}
+
+.post :global(blockquote) {
+  padding: 10px;
+  margin: auto auto 20px auto;
+  border-left: 4px solid var(--fg-1);
+  font-size: 0.8rem;
 }
