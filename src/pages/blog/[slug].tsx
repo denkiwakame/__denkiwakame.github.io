@@ -14,7 +14,7 @@ import getNotionUsers from '../../lib/notion/getNotionUsers'
 import { getBlogLink, getDateStr } from '../../lib/blog-helpers'
 import minimatch from 'minimatch'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar, iconCodeFork } from '@fortawesome/free-solid-svg-icons'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
 
 // Get the data for each blog post
 export async function getStaticProps({ params: { slug }, preview }) {
@@ -264,8 +264,8 @@ const RenderPost = ({ post, redirect, preview }) => {
                   style={{
                     background: 'var(--bg-2)',
                     padding: '1em',
-                    'border-radius': 'var(--radius)',
-                    'font-family': 'var(--font-mono)',
+                    borderRadius: 'var(--radius)',
+                    fontFamily: 'var(--font-mono)',
                   }}
                 >
                   <a
@@ -273,30 +273,30 @@ const RenderPost = ({ post, redirect, preview }) => {
                     target="_blank"
                     style={{
                       color: 'var(--accents-2)',
-                      'font-size': '0.8rem',
-                      'font-weight': 'bolder',
+                      fontSize: '0.8rem',
+                      fontWeight: 'bolder',
                     }}
                   >
                     {properties.title}
                   </a>
-                  <div style={{ 'font-size': '0.6rem' }}>
+                  <div style={{ fontSize: '0.6rem' }}>
                     {properties.description}
                   </div>
                   <div
                     style={{
-                      'margin-top': '0.4rem',
-                      'font-size': '0.6rem',
-                      'font-weight': 'bolder',
+                      marginTop: '0.4rem',
+                      fontSize: '0.6rem',
+                      fontWeight: 'bolder',
                     }}
                   >
                     <span
-                      style={{ 'font-size': '0.55rem', margin: '0 0.1rem 0 0' }}
+                      style={{ fontSize: '0.55rem', margin: '0 0.1rem 0 0' }}
                     >
                       language:
                     </span>
                     <span
                       style={{
-                        'font-size': '0.55rem',
+                        fontSize: '0.55rem',
                         color: 'var(--accents-3)',
                         margin: '0 0.4rem 0 0',
                       }}
@@ -306,7 +306,7 @@ const RenderPost = ({ post, redirect, preview }) => {
                     <FontAwesomeIcon icon={faStar} size="xs" />
                     <span
                       style={{
-                        'font-size': '0.55rem',
+                        fontSize: '0.55rem',
                         margin: '0 0 0 0.1rem',
                       }}
                     >
