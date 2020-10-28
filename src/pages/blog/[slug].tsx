@@ -12,6 +12,9 @@ import React, { CSSProperties, useEffect } from 'react'
 import getBlogIndex from '../../lib/notion/getBlogIndex'
 import getNotionUsers from '../../lib/notion/getNotionUsers'
 import { getBlogLink, getDateStr } from '../../lib/blog-helpers'
+import minimatch from 'minimatch'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStar, iconCodeFork } from '@fortawesome/free-solid-svg-icons'
 
 // Get the data for each blog post
 export async function getStaticProps({ params: { slug }, preview }) {
@@ -52,6 +55,25 @@ export async function getStaticProps({ params: { slug }, preview }) {
         post.hasTweet = true
       } catch (_) {
         console.log(`Failed to get tweet embed for ${src}`)
+      }
+    } else if (type == 'bookmark') {
+      // FIXME
+      const src = properties.link[0][0]
+      if (!minimatch(src, 'https://github.com/**/**')) continue
+      const userId = src.split('/')[3]
+      const repoId = src.split('/')[4]
+
+      try {
+        const res = await fetch(
+          `https://api.github.com/repos/${userId}/${repoId}`
+        )
+        const json = await res.json()
+        properties.img = json.owner.avatar_url
+        properties.description = json.description
+        properties.star = json.stargazers_count
+        properties.language = json.language
+      } catch (_) {
+        console.log(`Failed to get github embed for ${src}`)
       }
     }
   }
@@ -153,9 +175,6 @@ const RenderPost = ({ post, redirect, preview }) => {
       )}
       <div className={blogStyles.post}>
         <h1>{post.Page || ''}</h1>
-        {post.Authors.length > 0 && (
-          <div className="authors">By: {post.Authors.join(' ')}</div>
-        )}
         {post.Date && (
           <div className="posted">Posted: {getDateStr(post.Date)}</div>
         )}
@@ -238,6 +257,66 @@ const RenderPost = ({ post, redirect, preview }) => {
                 toRender.push(textBlock(properties.title, false, id))
               }
               break
+            case 'bookmark': {
+              console.log(properties)
+              toRender.push(
+                <div
+                  style={{
+                    background: 'var(--bg-2)',
+                    padding: '1em',
+                    'border-radius': 'var(--radius)',
+                    'font-family': 'var(--font-mono)',
+                  }}
+                >
+                  <a
+                    href={properties.link[0][0]}
+                    target="_blank"
+                    style={{
+                      color: 'var(--accents-2)',
+                      'font-size': '0.8rem',
+                      'font-weight': 'bolder',
+                    }}
+                  >
+                    {properties.title}
+                  </a>
+                  <div style={{ 'font-size': '0.6rem' }}>
+                    {properties.description}
+                  </div>
+                  <div
+                    style={{
+                      'margin-top': '0.4rem',
+                      'font-size': '0.6rem',
+                      'font-weight': 'bolder',
+                    }}
+                  >
+                    <span
+                      style={{ 'font-size': '0.55rem', margin: '0 0.1rem 0 0' }}
+                    >
+                      language:
+                    </span>
+                    <span
+                      style={{
+                        'font-size': '0.55rem',
+                        color: 'var(--accents-3)',
+                        margin: '0 0.4rem 0 0',
+                      }}
+                    >
+                      {properties.language}
+                    </span>
+                    <FontAwesomeIcon icon={faStar} size="xs" />
+                    <span
+                      style={{
+                        'font-size': '0.55rem',
+                        margin: '0 0 0 0.1rem',
+                      }}
+                    >
+                      {properties.star}
+                    </span>
+                  </div>
+                </div>
+              )
+              break
+            }
             case 'image':
             case 'video':
             case 'embed': {
@@ -269,7 +348,7 @@ const RenderPost = ({ post, redirect, preview }) => {
                     top: 0,
                   }
                 : {
-                    width,
+                    width: block_width,
                     border: 'none',
                     height: block_height,
                     display: 'block',
