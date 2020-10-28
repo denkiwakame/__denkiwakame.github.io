@@ -29,7 +29,7 @@ const Code = ({ children, language = 'javascript' }) => {
           color: var(--fg-2);
           background: var(--bg-2);
           border-color: var(--bg-2);
-          font-size: 0.75rem;
+          font-size: 0.65rem;
           border-radius: var(--radius);
         }
       `}</style>
