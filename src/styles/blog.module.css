@@ -159,7 +159,7 @@
 
 .post :global(li) {
   color: var(--fg-2);
-  font-size: 0.7rem;
+  font-size: 0.75rem;
 }
 
 .post :global(blockquote) {

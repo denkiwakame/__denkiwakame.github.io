@@ -31,6 +31,7 @@
   --fg-1: #96897b;
   --fg-2: #fdf4c1;
 
+  --blog-font-size: 0.8rem;
   --mobile-font-size: 12px;
 }
 
@@ -69,7 +70,6 @@ pre[class*='language-'] {
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
-  font-size: 0.95em;
   line-height: 1.4em;
   tab-size: 4;
   hyphens: none;
@@ -256,14 +256,9 @@ pre.dark[class*='language-'] {
   margin: var(--gap-half) auto;
 }
 figure {
-  font-size: 0.85rem;
+  font-size: var(--blog-font-size);
   color: #999;
   line-height: 1.8;
-}
-
-figure {
-  font-size: 0.85rem;
-  color: #999;
 }
 
 a {
@@ -327,7 +322,7 @@ h3 {
 p {
   color: var(--fg-2);
   font-weight: 400;
-  font-size: 0.8rem;
+  font-size: var(--blog-font-size);
   line-height: 1.2;
 }
 pre {
