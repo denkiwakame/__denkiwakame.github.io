@@ -41,7 +41,7 @@ const degrees = [
     year: '2013 Aug.-2013 Sep.',
   },
   {
-    jobtitle: 'Software Engineer Intern',
+    jobtitle: 'Software Engineer Intern (BOLD)',
     institute: 'Google',
     country: 'Japan',
     desc: 'Porting image APIs for Natiev Client project at Chrome Team.',

@@ -1,16 +1,4 @@
-# Notion Blog Portfolio
+# denkiwakame.github.io
 
-- Next.js portfolio site forked from [notion-blog](https://github.com/ijjk/notion-blog).
-
-### Dev (local)
-
-- `$ yarn install`
-- `$ yarn dev`
-
-### Build
-
-- `$ yarn build`
-
-### Export
-
-- `$ yarn export`
+- source code of [denkiwakame.github.io](https://denkiwakame.github.io)
+- from [notion-blog](https://github.com/ijjk/notion-blog).
