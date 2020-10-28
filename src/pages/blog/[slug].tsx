@@ -161,7 +161,7 @@ const RenderPost = ({ post, redirect, preview }) => {
 
   return (
     <>
-      <Header titlePre={post.Page} />
+      <Header title={post.Page} description={post.preview} />
       {preview && (
         <div className={blogStyles.previewAlertContainer}>
           <div className={blogStyles.previewAlert}>
@@ -258,7 +258,6 @@ const RenderPost = ({ post, redirect, preview }) => {
               }
               break
             case 'bookmark': {
-              console.log(properties)
               toRender.push(
                 <div
                   style={{

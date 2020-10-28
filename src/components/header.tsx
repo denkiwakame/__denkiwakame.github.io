@@ -11,22 +11,35 @@ const navItems: { label: string; page?: string; link?: string }[] = [
 
 const ogImageUrl = 'https://avatars0.githubusercontent.com/u/1871262?s=400'
 
-export default ({ titlePre = '' }) => {
+export default ({ titlePre = '', title = '', description = '' }) => {
   const { pathname } = useRouter()
 
   return (
     <header className={styles.header}>
       <Head>
-        <title>{titlePre ? `${titlePre} |` : ''} Mai Nishimura</title>
+        <title>
+          {titlePre ? `${titlePre} |` : ''}
+          {title ? `${title}` : 'denkiwakame'}
+        </title>
         <meta
-          name="description"
-          content="Computer Vision, GPGPU, Web applications, and Vim"
+          name="og:description"
+          content={
+            description
+              ? `${description}`
+              : 'computer vision, GPU-accelerated machine learning, and vim'
+          }
         />
-        <meta name="og:title" content="Mai Nishimura" />
+        <meta
+          name="og:title"
+          content={
+            (titlePre ? `${titlePre} |` : '') +
+            (title ? `${title}` : 'denkiwakame')
+          }
+        />
         <meta property="og:image" content={ogImageUrl} />
         <meta name="twitter:site" content="@denkiwakame" />
         <meta name="twitter:creator" content="@denkiwakame" />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:card" content="summary" />
         <meta name="twitter:url" content="https://denkiwakame.github.io" />
       </Head>
       <ul>
