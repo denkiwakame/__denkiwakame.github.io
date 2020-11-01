@@ -3,7 +3,7 @@ import contactStyles from '../styles/contact.module.css'
 
 const degrees = [
   {
-    title: 'Ph.D. candidate',
+    title: 'Ph.D. student',
     university: 'Kyoto University',
     country: 'Japan',
     year: '2020-present',
