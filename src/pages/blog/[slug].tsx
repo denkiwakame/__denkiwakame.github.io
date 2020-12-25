@@ -302,7 +302,7 @@ const RenderPost = ({ post, redirect, preview }) => {
                     >
                       {properties.language}
                     </span>
-                    <FontAwesomeIcon icon={faStar} size="xs" />
+                    <FontAwesomeIcon icon={faStar} size="xs" width="8" />
                     <span
                       style={{
                         fontSize: '0.55rem',

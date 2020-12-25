@@ -34,6 +34,20 @@ const papers = [
   },
   {
     authors: [
+      'Hiroaki Minoura',
+      'Ryo Yonetani',
+      'Mai Nishimura',
+      'Yoshitaka Ushiku',
+    ],
+    title: 'Crowd Density Forecasting by Modeling Patch-based Dynamics',
+    journal: 'IEEE Robotics and Automation Letters (RA-L)',
+    year: '2020',
+    links: {
+      paper: 'https://arxiv.org/abs/1911.09814',
+    },
+  },
+  {
+    authors: [
       'Ryo Yonetani',
       'Tatsunori Taniai',
       'Mohammadamin Barekatain',
