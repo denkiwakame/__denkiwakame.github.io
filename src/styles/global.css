@@ -29,7 +29,8 @@
     Bitstream Vera Sans Mono, Courier New, monospace;
 
   --fg-1: #96897b;
-  --fg-2: #fdf4c1;
+  /* --fg-2: #fdf4c1; */
+  --fg-2: #d5c4a1;
 
   --blog-font-size: 0.8rem;
   --mobile-font-size: 12px;
