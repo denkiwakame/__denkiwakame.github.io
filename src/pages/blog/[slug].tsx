@@ -11,10 +11,18 @@ import getPageData from '../../lib/notion/getPageData'
 import React, { CSSProperties, useEffect } from 'react'
 import getBlogIndex from '../../lib/notion/getBlogIndex'
 import getNotionUsers from '../../lib/notion/getNotionUsers'
-import { getBlogLink, getDateStr } from '../../lib/blog-helpers'
+import { getBlogLink, getAbsBlogLink, getDateStr } from '../../lib/blog-helpers'
 import minimatch from 'minimatch'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
+import {
+  HatenaShareButton,
+  TwitterShareButton,
+  FacebookShareButton,
+  TwitterIcon,
+  HatenaIcon,
+  FacebookIcon,
+} from 'react-share'
 
 // Get the data for each blog post
 export async function getStaticProps({ params: { slug }, preview }) {
@@ -176,9 +184,40 @@ const RenderPost = ({ post, redirect, preview }) => {
       <div className={blogStyles.post}>
         <h1>{post.Page || ''}</h1>
         {post.Date && (
-          <div className="posted">Posted: {getDateStr(post.Date)}</div>
+          <div className={blogStyles.posted}>
+            Posted: {getDateStr(post.Date)}
+          </div>
         )}
 
+        <div className={blogStyles.snsShare}>
+          <TwitterShareButton
+            title={post.Page}
+            url={getAbsBlogLink(post.Slug)}
+            className={blogStyles.snsShareButton}
+          >
+            <TwitterIcon size="24" round={false} />
+          </TwitterShareButton>
+        </div>
+        <div className={blogStyles.snsShare}>
+          <FacebookShareButton
+            title={post.Page}
+            url={getAbsBlogLink(post.Slug)}
+            className={blogStyles.snsShareButton}
+          >
+            <FacebookIcon size="24" round={false} />
+          </FacebookShareButton>
+        </div>
+        <div className={blogStyles.snsShare}>
+          <HatenaShareButton
+            title={post.Page}
+            url={getAbsBlogLink(post.Slug)}
+            windowWidth={660}
+            windowHeight={460}
+            className={blogStyles.snsShareButton}
+          >
+            <HatenaIcon size="24" round={false} />
+          </HatenaShareButton>
+        </div>
         <hr />
 
         {(!post.content || post.content.length === 0) && (

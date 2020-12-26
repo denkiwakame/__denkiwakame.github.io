@@ -65,7 +65,7 @@
 .postPreview {
   max-width: 600px;
   margin: 10px auto;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+  margin-bottom: 30px;
 }
 
 .postPreview:last-child {
@@ -138,6 +138,10 @@
   padding: 5%;
 }
 
+.posted {
+  font-size: 0.8rem;
+}
+
 .post :global(hr) {
   border: 0;
   margin-bottom: 2em;
@@ -152,11 +156,6 @@
   font-size: 0.8rem;
 }
 
-.share :global(div) {
-  text-align: right;
-  margin: 20px;
-}
-
 .post :global(li) {
   color: var(--fg-2);
   font-size: 0.75rem;
@@ -167,4 +166,20 @@
   margin: auto auto 20px auto;
   border-left: 4px solid var(--fg-1);
   font-size: 0.8rem;
+}
+
+.snsShare {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.snsShareButton {
+  cursor: pointer;
+}
+
+.snsShareButton:not(:active) {
+  opacity: 0.5;
 }

@@ -2,6 +2,11 @@ export const getBlogLink = (slug: string) => {
   return `/blog/${slug}`
 }
 
+// XXX
+export const getAbsBlogLink = (slug: string) => {
+  return `https://denkiwakame.github.io${getBlogLink(slug)}`
+}
+
 export const getDateStr = date => {
   return new Date(date).toLocaleString('en-US', {
     month: 'long',
