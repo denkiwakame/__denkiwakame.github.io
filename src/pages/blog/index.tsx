@@ -43,7 +43,7 @@ export async function getStaticProps({ preview }) {
       preview: preview || false,
       posts,
     },
-    unstable_revalidate: 10,
+    revalidate: 10,
   }
 }
 
@@ -69,17 +69,28 @@ export default ({ posts = [], preview }) => {
         )}
         {posts.map(post => {
           return (
-            <div className={blogStyles.postPreview} key={post.Slug}>
-              <h3>
-                <Link href="/blog/[slug]" as={getBlogLink(post.Slug)}>
-                  <div className={blogStyles.titleContainer}>
-                    {!post.Published && (
-                      <span className={blogStyles.draftBadge}>Draft</span>
-                    )}
-                    <a>{post.Page}</a>
-                  </div>
-                </Link>
-              </h3>
+            <div
+              className={blogStyles.postPreview}
+              key={post.Slug}
+              style={{
+                background: 'var(--bg-2)',
+                padding: '1em',
+                borderRadius: 'var(--radius)',
+                fontFamily: 'var(--font-mono)',
+              }}
+            >
+              <Link
+                href="/blog/[slug]"
+                as={getBlogLink(post.Slug)}
+                target="_blank"
+                style={{
+                  color: 'var(--accents-2)',
+                  fontSize: '0.8rem',
+                  fontWeight: 'bolder',
+                }}
+              >
+                <h3>{post.Page}</h3>
+              </Link>
               {post.Date && (
                 <div className={blogStyles.posted}>
                   Posted: {getDateStr(post.Date)}

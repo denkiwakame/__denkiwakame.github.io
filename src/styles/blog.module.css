@@ -72,10 +72,15 @@
   border-bottom: none;
 }
 
+.postPreview h3:hover {
+  cursor: pointer;
+}
+
 .postPreview h3,
 .post h1 {
   color: var(--accents-1);
-  margin-bottom: 0;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
 }
 
 .post h1 {
@@ -140,6 +145,8 @@
 
 .posted {
   font-size: 0.8rem;
+  margin-top: 0rem;
+  margin-bottom: 0.5rem;
 }
 
 .post :global(hr) {
