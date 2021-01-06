@@ -82,7 +82,6 @@ export default ({ posts = [], preview }) => {
               <Link
                 href="/blog/[slug]"
                 as={getBlogLink(post.Slug)}
-                target="_blank"
                 style={{
                   color: 'var(--accents-2)',
                   fontSize: '0.8rem',
