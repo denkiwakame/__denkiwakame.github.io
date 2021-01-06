@@ -90,9 +90,14 @@
   margin-top: 0;
 }
 
-.post :global(h2),
-.post :global(h3) {
-  margin: 3rem 0 1.5rem 0;
+.post h2 {
+  margin: 2.5rem 0 1rem 0;
+  color: var(--fg-3);
+}
+
+.post h3 {
+  margin: 1.5rem 0 1rem 0;
+  color: var(--fg-2);
 }
 
 .post :global(video),
@@ -188,8 +193,9 @@
 
 .snsShareButton {
   cursor: pointer;
+  opacity: 0.5;
 }
 
-.snsShareButton:not(:active) {
-  opacity: 0.5;
+.snsShareButton:hover {
+  opacity: 1;
 }

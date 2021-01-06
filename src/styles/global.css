@@ -31,6 +31,7 @@
   --fg-1: #96897b;
   /* --fg-2: #fdf4c1; */
   --fg-2: #d5c4a1;
+  --fg-3: #ebdbb2;
 
   --blog-font-size: 0.8rem;
   --mobile-font-size: 12px;
@@ -293,6 +294,7 @@ h1 {
   font-size: 1.8rem;
   font-weight: 800;
   letter-spacing: -0.05rem;
+  color: var(--fg-3);
 }
 
 h2 {
@@ -303,7 +305,7 @@ h2 {
 }
 
 h3 {
-  color: var(--fg-1);
+  color: var(--accents-3);
 }
 
 .video {
@@ -353,7 +355,7 @@ code {
   padding: 0.2rem;
   border-radius: var(--radius);
   font-family: var(--font-mono);
-  color: var(--accents-2);
+  color: var(--accents-5);
 }
 
 .slice {

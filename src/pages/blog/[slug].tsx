@@ -310,7 +310,7 @@ const RenderPost = ({ post, redirect, preview }) => {
                     href={properties.link[0][0]}
                     target="_blank"
                     style={{
-                      color: 'var(--accents-2)',
+                      color: 'var(--accents-1)',
                       fontSize: '0.8rem',
                       fontWeight: 'bolder',
                     }}
