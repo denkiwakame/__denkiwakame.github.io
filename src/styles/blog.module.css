@@ -66,6 +66,9 @@
   max-width: 600px;
   margin: 10px auto;
   margin-bottom: 30px;
+  background: var(--bg-2);
+  padding: 1em;
+  borderradius: var(--radius);
 }
 
 .postPreview:last-child {

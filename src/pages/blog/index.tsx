@@ -69,25 +69,8 @@ export default ({ posts = [], preview }) => {
         )}
         {posts.map(post => {
           return (
-            <div
-              className={blogStyles.postPreview}
-              key={post.Slug}
-              style={{
-                background: 'var(--bg-2)',
-                padding: '1em',
-                borderRadius: 'var(--radius)',
-                fontFamily: 'var(--font-mono)',
-              }}
-            >
-              <Link
-                href="/blog/[slug]"
-                as={getBlogLink(post.Slug)}
-                style={{
-                  color: 'var(--accents-2)',
-                  fontSize: '0.8rem',
-                  fontWeight: 'bolder',
-                }}
-              >
+            <div className={blogStyles.postPreview} key={post.Slug}>
+              <Link href="/blog/[slug]" as={getBlogLink(post.Slug)}>
                 <h3>{post.Page}</h3>
               </Link>
               {post.Date && (
