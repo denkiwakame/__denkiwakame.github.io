@@ -114,6 +114,11 @@ export async function getStaticPaths() {
 
 const listTypes = new Set(['bulleted_list', 'numbered_list'])
 
+const getDomain = src => {
+  const url = new URL(src)
+  return url.hostname
+}
+
 const RenderPost = ({ post, redirect, preview }) => {
   const router = useRouter()
 
@@ -296,7 +301,8 @@ const RenderPost = ({ post, redirect, preview }) => {
                 toRender.push(textBlock(properties.title, false, id))
               }
               break
-            case 'bookmark': {
+            case 'pdf': {
+              console.log(properties)
               toRender.push(
                 <div
                   style={{
@@ -307,7 +313,7 @@ const RenderPost = ({ post, redirect, preview }) => {
                   }}
                 >
                   <a
-                    href={properties.link[0][0]}
+                    href={properties.source[0][0]}
                     target="_blank"
                     style={{
                       color: 'var(--accents-1)',
@@ -315,44 +321,111 @@ const RenderPost = ({ post, redirect, preview }) => {
                       fontWeight: 'bolder',
                     }}
                   >
-                    {properties.title}
+                    {getDomain(properties.source[0][0])}
                   </a>
                   <div style={{ fontSize: '0.6rem' }}>
-                    {properties.description}
-                  </div>
-                  <div
-                    style={{
-                      marginTop: '0.4rem',
-                      fontSize: '0.6rem',
-                      fontWeight: 'bolder',
-                    }}
-                  >
-                    <span
-                      style={{ fontSize: '0.55rem', margin: '0 0.1rem 0 0' }}
-                    >
-                      language:
-                    </span>
-                    <span
-                      style={{
-                        fontSize: '0.55rem',
-                        color: 'var(--accents-3)',
-                        margin: '0 0.4rem 0 0',
-                      }}
-                    >
-                      {properties.language}
-                    </span>
-                    <FontAwesomeIcon icon={faStar} size="xs" width="8" />
-                    <span
-                      style={{
-                        fontSize: '0.55rem',
-                        margin: '0 0 0 0.1rem',
-                      }}
-                    >
-                      {properties.star}
-                    </span>
+                    {properties.source[0][0]}
                   </div>
                 </div>
               )
+              break
+            }
+            case 'bookmark': {
+              // TODO: embed react component
+              if (properties.language) {
+                toRender.push(
+                  <div
+                    style={{
+                      background: 'var(--bg-2)',
+                      padding: '1em',
+                      marginTop: '.5em',
+                      borderRadius: 'var(--radius)',
+                      fontFamily: 'var(--font-mono)',
+                    }}
+                  >
+                    <a
+                      href={properties.link[0][0]}
+                      target="_blank"
+                      style={{
+                        color: 'var(--accents-1)',
+                        fontSize: '0.8rem',
+                        fontWeight: 'bolder',
+                      }}
+                    >
+                      {properties.title}
+                    </a>
+                    <div style={{ fontSize: '0.6rem' }}>
+                      {properties.description}
+                    </div>
+                    <div
+                      style={{
+                        marginTop: '0.4rem',
+                        fontSize: '0.6rem',
+                        fontWeight: 'bolder',
+                      }}
+                    >
+                      <span
+                        style={{ fontSize: '0.55rem', margin: '0 0.1rem 0 0' }}
+                      >
+                        language:
+                      </span>
+                      <span
+                        style={{
+                          fontSize: '0.55rem',
+                          color: 'var(--accents-3)',
+                          margin: '0 0.4rem 0 0',
+                        }}
+                      >
+                        {properties.language}
+                      </span>
+                      <FontAwesomeIcon icon={faStar} size="xs" width="8" />
+                      <span
+                        style={{
+                          fontSize: '0.55rem',
+                          margin: '0 0 0 0.1rem',
+                        }}
+                      >
+                        {properties.star}
+                      </span>
+                    </div>
+                  </div>
+                )
+              } else {
+                toRender.push(
+                  <div
+                    style={{
+                      background: 'var(--bg-2)',
+                      padding: '1em',
+                      marginTop: '.5em',
+                      borderRadius: 'var(--radius)',
+                      fontFamily: 'var(--font-mono)',
+                    }}
+                  >
+                    <a
+                      href={properties.link[0][0]}
+                      target="_blank"
+                      style={{
+                        color: 'var(--accents-1)',
+                        fontSize: '0.8rem',
+                        fontWeight: 'bolder',
+                      }}
+                    >
+                      {properties.title}
+                    </a>
+                    <div style={{ fontSize: '0.6rem' }}>
+                      {properties.description}
+                    </div>
+                    <div
+                      style={{
+                        marginTop: '0.4rem',
+                        fontSize: '0.6rem',
+                        fontWeight: 'bolder',
+                      }}
+                    ></div>
+                  </div>
+                )
+              }
+
               break
             }
             case 'image':
