@@ -22,7 +22,7 @@
     "github-slugger": "^1.2.1",
     "katex": "^0.12.0",
     "next": "^10.0.4",
-    "prismjs": "^1.22.0",
+    "prismjs": "^1.23.0",
     "react": "16.12.0",
     "react-dom": "16.12.0",
     "react-share": "^4.3.1",
