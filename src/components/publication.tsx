@@ -41,7 +41,7 @@ const papers = [
       'Asako Kanezaki',
     ],
     title: 'Path Planning using Neural A* Search',
-    journal: 'ICML',
+    journal: 'International Conference on Machine Learning (ICML)',
     year: '2021',
     links: {
       paper: 'https://arxiv.org/abs/2009.07476',
