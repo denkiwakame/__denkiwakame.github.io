@@ -34,6 +34,22 @@ const papers = [
   },
   {
     authors: [
+      'Ryo Yonetani',
+      'Tatsunori Taniai',
+      'Mohammadamin Barekatain',
+      'Mai Nishimura',
+      'Asako Kanezaki',
+    ],
+    title: 'Path Planning using Neural A* Search',
+    journal: 'ICML',
+    year: '2021',
+    links: {
+      paper: 'https://arxiv.org/abs/2009.07476',
+      projectpage: 'https://omron-sinicx.github.io/neural-astar/'
+    },
+  },
+  {
+    authors: [
       'Hiroaki Minoura',
       'Ryo Yonetani',
       'Mai Nishimura',
@@ -44,21 +60,6 @@ const papers = [
     year: '2020',
     links: {
       paper: 'https://arxiv.org/abs/1911.09814',
-    },
-  },
-  {
-    authors: [
-      'Ryo Yonetani',
-      'Tatsunori Taniai',
-      'Mohammadamin Barekatain',
-      'Mai Nishimura',
-      'Asako Kanezaki',
-    ],
-    title: 'Path Planning using Neural A* Search',
-    journal: 'arXiv preprint',
-    year: '2020',
-    links: {
-      paper: 'https://arxiv.org/abs/2009.07476',
     },
   },
   {
