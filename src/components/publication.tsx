@@ -3,6 +3,15 @@ import contactStyles from '../styles/contact.module.css'
 
 const papers = [
   {
+    authors: ['Mai Nishimura', 'Shohei Nobuhara', 'Ko Nishino'],
+    title:
+      'View Birdification in the Crowd: Ground-Plane Localization from Perceived Movements',
+    journal:
+      'The British Machine Vision Conference (BMVC)',
+    year: '2021',
+    links: {},
+  },
+  {
     authors: ['Mai Nishimura', 'Ryo Yonetani'],
     title:
       'L2B: Learning to Balance the Safety-Efficiency Trade-off in Interactive Crowd-aware Robot Navigation',
