@@ -14,8 +14,8 @@ export default () => (
     <Header titlePre="ABOUT" />
     <div className="explanation">
       <Contact />
-      <Education />
       <Experiences />
+      <Education />
       <Publications />
     </div>
   </>
