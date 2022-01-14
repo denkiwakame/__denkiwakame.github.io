@@ -6,10 +6,58 @@ const papers = [
     authors: ['Mai Nishimura', 'Shohei Nobuhara', 'Ko Nishino'],
     title:
       'View Birdification in the Crowd: Ground-Plane Localization from Perceived Movements',
-    journal:
-      'The British Machine Vision Conference (BMVC)',
+    journal: 'The British Machine Vision Conference (BMVC)',
     year: '2021',
-    links: {},
+    links: {
+      paper: 'https://arxiv.org/abs/2111.05060',
+    },
+  },
+  {
+    authors: [
+      'Ryo Yonetani',
+      'Tatsunori Taniai',
+      'Mohammadamin Barekatain',
+      'Mai Nishimura',
+      'Asako Kanezaki',
+    ],
+    title: 'Path Planning using Neural A* Search',
+    journal: 'International Conference on Machine Learning (ICML)',
+    year: '2021',
+    links: {
+      paper: 'https://arxiv.org/abs/2009.07476',
+      projectpage: 'https://omron-sinicx.github.io/neural-astar/',
+    },
+  },
+  {
+    authors: [
+      'Mutsuki Nakahara',
+      'Daisuke Hisano',
+      'Mai Nishimura',
+      'Yoshitaka Ushiku',
+      'Kazuki Maruta',
+      'Yu Nakayama',
+    ],
+    title:
+      'Retransmission Edge Computing System Conducting Adaptive Image Compression Based on Image Recognition Accuracy',
+    year: '2021',
+    links: {
+      paper: 'https://ieeexplore.ieee.org/document/9625464',
+    },
+    journal: 'VTC-Fall',
+  },
+  {
+    authors: [
+      'Hiroaki Minoura',
+      'Ryo Yonetani',
+      'Mai Nishimura',
+      'Yoshitaka Ushiku',
+    ],
+    title: 'Crowd Density Forecasting by Modeling Patch-based Dynamics',
+    journal: 'IEEE Robotics and Automation Letters (RA-L)',
+    year: '2021',
+    links: {
+      paper: 'https://arxiv.org/abs/1911.09814',
+    },
   },
   {
     authors: ['Mai Nishimura', 'Ryo Yonetani'],
@@ -21,6 +69,21 @@ const papers = [
     links: {
       paper: 'https://arxiv.org/abs/2003.09207',
       projectpage: 'https://denkiwakame.github.io/l2b',
+    },
+  },
+  {
+    authors: [
+      'Yasuhiro Fujiwara',
+      'Yasutoshi Ida',
+      'Juny Arai',
+      'Mai Nishimura',
+      'Sotetsu Iwamura',
+    ],
+    title: 'Fast Algorithm for the Lasso based L1-Graph Construction',
+    journal: 'Proceedings of the Very Large Data Bases (PVLDB)',
+    year: '2016',
+    links: {
+      paper: 'http://www.vldb.org/pvldb/vol10/p229-fujiwara.pdf',
     },
   },
   {
@@ -39,51 +102,6 @@ const papers = [
       paper:
         'https://openaccess.thecvf.com/content_iccv_2015/papers/Nishimura_A_Linear_Generalized_ICCV_2015_paper.pdf',
       code: 'https://github.com/computer-vision/iccv2015',
-    },
-  },
-  {
-    authors: [
-      'Ryo Yonetani',
-      'Tatsunori Taniai',
-      'Mohammadamin Barekatain',
-      'Mai Nishimura',
-      'Asako Kanezaki',
-    ],
-    title: 'Path Planning using Neural A* Search',
-    journal: 'International Conference on Machine Learning (ICML)',
-    year: '2021',
-    links: {
-      paper: 'https://arxiv.org/abs/2009.07476',
-      projectpage: 'https://omron-sinicx.github.io/neural-astar/'
-    },
-  },
-  {
-    authors: [
-      'Hiroaki Minoura',
-      'Ryo Yonetani',
-      'Mai Nishimura',
-      'Yoshitaka Ushiku',
-    ],
-    title: 'Crowd Density Forecasting by Modeling Patch-based Dynamics',
-    journal: 'IEEE Robotics and Automation Letters (RA-L)',
-    year: '2020',
-    links: {
-      paper: 'https://arxiv.org/abs/1911.09814',
-    },
-  },
-  {
-    authors: [
-      'Yasuhiro Fujiwara',
-      'Yasutoshi Ida',
-      'Juny Arai',
-      'Mai Nishimura',
-      'Sotetsu Iwamura',
-    ],
-    title: 'Fast Algorithm for the Lasso based L1-Graph Construction',
-    journal: 'Proceedings of the Very Large Data Bases (PVLDB)',
-    year: '2016',
-    links: {
-      paper: 'http://www.vldb.org/pvldb/vol10/p229-fujiwara.pdf',
     },
   },
 ]
