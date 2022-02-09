@@ -2,6 +2,17 @@ import sharedStyles from '../styles/shared.module.css'
 import contactStyles from '../styles/contact.module.css'
 
 const papers = [
+    {
+    authors: ['Keisuke Okumura', 'Ryo Yonetani', 'Mai Nishimura', 'Asako Kanezaki'],
+    title:
+      'CTRMs: Learning to Construct Cooperative Timed Roadmaps for Multi-agent Path Planning in Continuous Spaces',
+    journal: 'International Conference on Autonomous Agents and Multi-Agent Systems (AAMAS)',
+    year: '2022',
+    links: {
+      paper: 'https://arxiv.org/abs/2201.09467',
+      projectpage: 'https://omron-sinicx.github.io/ctrm/',
+    },
+  },
   {
     authors: ['Mai Nishimura', 'Shohei Nobuhara', 'Ko Nishino'],
     title:
