@@ -8,6 +8,7 @@ import sharedStyles from '../styles/shared.module.css'
 import Education from '../components/education'
 import Experiences from '../components/experiences'
 import Publications from '../components/publication'
+import AcademicService from '../components/academic'
 
 export default () => (
   <>
@@ -17,6 +18,7 @@ export default () => (
       <Experiences />
       <Education />
       <Publications />
+      <AcademicService />
     </div>
   </>
 )
