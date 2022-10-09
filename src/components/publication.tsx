@@ -2,7 +2,18 @@ import sharedStyles from '../styles/shared.module.css'
 import contactStyles from '../styles/contact.module.css'
 
 const papers = [
-    {
+  {
+    authors: ['Kazumi Kasaura', 'Mai Nishimura', 'Ryo Yonetani'],
+    title:
+      'Prioritized Safe Interval Path Planning for Multi-Agent Pathfinding with Continuous Time on 2D Roadmaps',
+    journal: 'IEEE Robotics and Automation Letters (RA-L)',
+    year: '2022',
+    links: {
+      paper: 'https://ieeexplore.ieee.org/document/9811344',
+      projectpage: 'https://omron-sinicx.github.io/PSIPP-CTC/',
+    },
+  },
+  {
     authors: ['Keisuke Okumura', 'Ryo Yonetani', 'Mai Nishimura', 'Asako Kanezaki'],
     title:
       'CTRMs: Learning to Construct Cooperative Timed Roadmaps for Multi-agent Path Planning in Continuous Spaces',
