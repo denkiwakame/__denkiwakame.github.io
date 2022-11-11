@@ -3,6 +3,16 @@ import contactStyles from '../styles/contact.module.css'
 
 const papers = [
   {
+    authors: ['Mai Nishimura', 'Shohei Nobuhara', 'Ko Nishino'],
+    title:
+      'ViewBirdiformer: Learning to recover ground-plane crowd trajectories and ego-motion from a single ego-centric view',
+    journal: 'IEEE Robotics and Automation Letters (RA-L)',
+    year: '2022',
+    links: {
+      paper: 'https://arxiv.org/abs/2210.06332',
+    },
+  },
+  {
     authors: ['Kazumi Kasaura', 'Mai Nishimura', 'Ryo Yonetani'],
     title:
       'Prioritized Safe Interval Path Planning for Multi-Agent Pathfinding with Continuous Time on 2D Roadmaps',
@@ -14,10 +24,16 @@ const papers = [
     },
   },
   {
-    authors: ['Keisuke Okumura', 'Ryo Yonetani', 'Mai Nishimura', 'Asako Kanezaki'],
+    authors: [
+      'Keisuke Okumura',
+      'Ryo Yonetani',
+      'Mai Nishimura',
+      'Asako Kanezaki',
+    ],
     title:
       'CTRMs: Learning to Construct Cooperative Timed Roadmaps for Multi-agent Path Planning in Continuous Spaces',
-    journal: 'International Conference on Autonomous Agents and Multi-Agent Systems (AAMAS)',
+    journal:
+      'International Conference on Autonomous Agents and Multi-Agent Systems (AAMAS)',
     year: '2022',
     links: {
       paper: 'https://arxiv.org/abs/2201.09467',
