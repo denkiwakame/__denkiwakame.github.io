@@ -63,6 +63,7 @@
 }
 
 .postPreview {
+  display: flex;
   max-width: 100vw;
   margin: 10px auto;
   margin-bottom: 30px;
@@ -83,7 +84,26 @@
 .post h1 {
   color: var(--accents-1);
   margin-top: 0rem;
-  margin-bottom: 0rem;
+  margin-bottom: 1rem;
+}
+
+.postPreviewDate {
+  font-family: 'Bebas Neue';
+  float: left;
+  width: 15%;
+}
+
+.postPreviewDateMD {
+  display: block;
+  font-size: 2rem;
+}
+
+.postPreviewDateYear {
+  font-size: 1rem;
+}
+
+.postPreviewContent {
+  float: right;
 }
 
 .post h1 {
@@ -198,4 +218,16 @@
 
 .snsShareButton:hover {
   opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .postPreviewDate {
+    width: 80px;
+  }
+  .postPreviewDateMD {
+    font-size: 1rem;
+  }
+  .postPreviewDateYear {
+    font-size: 0.8rem;
+  }
 }

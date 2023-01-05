@@ -6,7 +6,8 @@ import sharedStyles from '../../styles/shared.module.css'
 
 import {
   getBlogLink,
-  getDateStr,
+  getDateMD,
+  getDateYear,
   postIsPublished,
 } from '../../lib/blog-helpers'
 import { textBlock } from '../../lib/notion/renderers'
@@ -72,21 +73,30 @@ export default ({ posts = [], preview }) => {
           {posts.map(post => {
             return (
               <div className={blogStyles.postPreview} key={post.Slug}>
-                <Link href="/blog/[slug]" as={getBlogLink(post.Slug)}>
-                  <h3>{post.Page}</h3>
-                </Link>
-                {post.Date && (
-                  <div className={blogStyles.posted}>
-                    Posted: {getDateStr(post.Date)}
-                  </div>
-                )}
-                <p>
-                  {(!post.preview || post.preview.length === 0) &&
-                    'No preview available'}
-                  {(post.preview || []).map((block, idx) =>
-                    textBlock(block, true, `${post.Slug}${idx}`)
+                <div className={blogStyles.postPreviewDate}>
+                  {post.Date && (
+                    <span className={blogStyles.postPreviewDateMD}>
+                      {getDateMD(post.Date)}
+                    </span>
                   )}
-                </p>
+                  {post.Date && (
+                    <span className={blogStyles.postPreviewDateYear}>
+                      {getDateYear(post.Date)}
+                    </span>
+                  )}
+                </div>
+                <div className={blogStyles.postPreviewContent}>
+                  <Link href="/blog/[slug]" as={getBlogLink(post.Slug)}>
+                    <h3>{post.Page}</h3>
+                  </Link>
+                  <p>
+                    {(!post.preview || post.preview.length === 0) &&
+                      'No preview available'}
+                    {(post.preview || []).map((block, idx) =>
+                      textBlock(block, true, `${post.Slug}${idx}`)
+                    )}
+                  </p>
+                </div>
               </div>
             )
           })}
