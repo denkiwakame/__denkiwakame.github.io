@@ -9,8 +9,21 @@ export const getAbsBlogLink = (slug: string) => {
 
 export const getDateStr = date => {
   return new Date(date).toLocaleString('en-US', {
-    month: 'long',
+    month: 'short',
     day: '2-digit',
+    year: 'numeric',
+  })
+}
+
+export const getDateMD = date => {
+  return new Date(date).toLocaleString('en-US', {
+    month: 'short',
+    day: '2-digit',
+  })
+}
+
+export const getDateYear = date => {
+  return new Date(date).toLocaleString('en-US', {
     year: 'numeric',
   })
 }

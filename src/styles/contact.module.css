@@ -1,3 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');
+
+.header {
+  /* display: flex; */
+  padding-top: 0.75rem;
+  border-bottom-width: 10px;
+  border-color: var(--fg-2);
+}
+
+.header h1 {
+  font-family: 'Monoton';
+  font-weight: normal;
+  text-align: center;
+}
+
 .links {
   display: block;
   margin: 1rem auto;

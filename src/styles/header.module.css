@@ -1,9 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
+
 .header {
   display: block;
   min-height: 64px;
   padding: 0.1em 0;
   text-align: center;
   letter-spacing: -0.02em;
+}
+
+.navbar {
+  font-family: 'Bebas Neue', 'Ubuntu Mono';
+  list-style: none;
+  padding: 0;
+  margin: 1rem;
+  font-size: 1.3rem;
+  font-weight: normal;
 }
 
 .header ul {
@@ -13,21 +24,35 @@
 
 .header ul li {
   display: inline-block;
-  padding: 0 10px;
+  margin: 0px;
+  padding: 0px 2rem;
 }
 
 .header :global(a) {
   color: var(--accents-3);
-  font-weight: 400;
 }
 
 .header :global(a.active) {
   color: var(--accents-1);
-  font-weight: 600;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .header {
-    padding: 0.5em 0 2em;
+    padding: 0;
+  }
+  .header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .header ul li {
+    display: inline-block;
+    margin: 0;
+    padding: 0 1rem;
+  }
+
+  .navbar a {
+    font-family: 'Bebas Neue';
+    font-size: 22px;
   }
 }

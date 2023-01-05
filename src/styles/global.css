@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans&display=swap');
 
 :root {
   --gap-quarter: 0.25rem;
@@ -11,12 +12,12 @@
   --bg-3: #646464;
   --fg: #a89883;
   --accents-1: #d76035;
-  --accents-2: #4d8b8a;
+  --accents-7: #4d8b8a;
   --accents-3: #837486;
   --accents-4: #b8bb26;
   --accents-5: #fabd2f;
   --accents-6: #83a598;
-  --accents-7: #87af87;
+  --accents-2: #87af87;
   --accents-8: #af5f5f;
   --geist-foreground: #000;
 
@@ -34,7 +35,7 @@
   --fg-3: #ebdbb2;
 
   --blog-font-size: 0.8rem;
-  --mobile-font-size: 12px;
+  --mobile-font-size: 14px;
 }
 
 * {
@@ -45,18 +46,15 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-size: 18px;
 }
 
 body {
   min-height: 100vh;
   background: var(--bg);
   color: var(--fg);
-  font-family: Ubuntu Mono, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-
-  /* background-image: radial-gradient(#ddd 1px, transparent 1px), */
-  /*   radial-gradient(#ddd 1px, transparent 1px);                 */
+  font-family: 'Fira Sans', Ubuntu Mono, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
   background-position: 0 0, 25px 25px;
   background-attachment: fixed;
   background-size: 50px 50px;
@@ -238,25 +236,26 @@ pre.dark[class*='language-'] {
   white-space: nowrap;
 }
 
-@media (max-width: 600px) {
-  .feature div {
-    flex-basis: auto;
-    padding-left: 0;
-  }
+/* @media (max-width: 600px) { */
+/*   .feature div {            */
+/*     flex-basis: auto;       */
+/*     padding-left: 0;        */
+/*   }                         */
 
-  .feature h4 {
-    font-size: 0.75rem;
-  }
-}
+/*   .feature h4 {             */
+/*     font-size: 0.75rem;     */
+/*   }                         */
+/* }                           */
 
-.explanation {
+.container {
   font-size: 1rem;
-  width: 45rem;
+  width: 50rem;
   max-width: 100vw;
-  padding: 0 2rem;
+  padding: 0 0.5rem;
   background: var(--bg);
   margin: var(--gap-half) auto;
 }
+
 figure {
   font-size: var(--blog-font-size);
   color: #999;
@@ -374,17 +373,24 @@ code {
 }
 
 @media (max-width: 800px) {
-  .explanation {
+  .container {
     padding: 0 1rem 1rem;
   }
 
+  h1 {
+    font-size: 1.6rem;
+  }
+
   h2 {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     letter-spacing: 0;
   }
   h3 {
     font-size: 1.2rem;
     letter-spacing: 0;
+  }
+  html {
+    font-size: var(--mobile-font-size);
   }
   b {
     font-size: var(--mobile-font-size);
@@ -393,6 +399,12 @@ code {
     font-size: var(--mobile-font-size);
   }
   a {
+    font-size: var(--mobile-font-size);
+  }
+  p {
+    font-size: var(--mobile-font-size);
+  }
+  figure {
     font-size: var(--mobile-font-size);
   }
 }

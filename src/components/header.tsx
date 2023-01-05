@@ -3,6 +3,7 @@ import Head from 'next/head'
 import ExtLink from './ext-link'
 import { useRouter } from 'next/router'
 import styles from '../styles/header.module.css'
+import Contact from '../components/contact'
 
 const navItems: { label: string; page?: string; link?: string }[] = [
   { label: 'ABOUT', page: '/' },
@@ -46,21 +47,24 @@ export default ({ titlePre = '', title = '', description = '' }) => {
           href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡️</text></svg>"
         />
       </Head>
-      <ul>
-        {navItems.map(({ label, page, link }) => (
-          <li key={label}>
-            {page ? (
-              <Link href={page}>
-                <a className={pathname === page ? 'active' : undefined}>
-                  {label}
-                </a>
-              </Link>
-            ) : (
-              <ExtLink href={link}>{label}</ExtLink>
-            )}
-          </li>
-        ))}
-      </ul>
+      <Contact />
+      <div className={styles.navbar}>
+        <ul>
+          {navItems.map(({ label, page, link }) => (
+            <li key={label}>
+              {page ? (
+                <Link href={page}>
+                  <a className={pathname === page ? 'active' : undefined}>
+                    {label}
+                  </a>
+                </Link>
+              ) : (
+                <ExtLink href={link}>{label}</ExtLink>
+              )}
+            </li>
+          ))}
+        </ul>
+      </div>
     </header>
   )
 }

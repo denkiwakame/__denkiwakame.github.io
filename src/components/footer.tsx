@@ -4,7 +4,7 @@ export default () => (
   <>
     <footer>
       <span>
-        © 2020 Mai Nishimura powered by{' '}
+        © 2020 denkiwakame powered by{' '}
         <a href="https://github.com/ijjk/notion-blog" target="_blank">
           Notion Blog
         </a>
