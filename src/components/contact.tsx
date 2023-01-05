@@ -1,4 +1,3 @@
-import Header from '../components/header'
 import ExtLink from '../components/ext-link'
 
 import sharedStyles from '../styles/shared.module.css'
@@ -33,13 +32,13 @@ const contacts = [
 ]
 
 export default () => (
-  <div className={sharedStyles.layout}>
-    <h1>Mai Nishimura</h1>
+  <div className={contactStyles.header}>
+    <h1>denkiwakame</h1>
     <div className={contactStyles.links}>
       {contacts.map(({ Comp, link, alt }) => {
         return (
           <ExtLink key={link} href={link} aria-label={alt}>
-            <Comp height={32} />
+            <Comp height={24} />
           </ExtLink>
         )
       })}
