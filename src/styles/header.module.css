@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
+
 .header {
   display: block;
   min-height: 64px;
@@ -7,7 +9,7 @@
 }
 
 .navbar {
-  font-family: 'Bebas Neue';
+  font-family: 'Bebas Neue', 'Ubuntu Mono';
   list-style: none;
   padding: 0;
   margin: 1rem;
@@ -34,7 +36,7 @@
   color: var(--accents-1);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .header {
     padding: 0;
   }
@@ -50,6 +52,7 @@
   }
 
   .navbar a {
-    font-size: 24px;
+    font-family: 'Bebas Neue';
+    font-size: 22px;
   }
 }
