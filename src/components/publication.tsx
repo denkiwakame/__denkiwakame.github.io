@@ -3,6 +3,17 @@ import contactStyles from '../styles/contact.module.css'
 
 const papers = [
   {
+    authors: ['Kazumi Kasaura', 'Ryo Yonetani', 'Mai Nishimura'],
+    title:
+      'Periodic Multi-Agent Path Planning',
+    journal: 'AAAI Conference on Artificial Intelligence (AAAI)',
+    year: '2023',
+    links: {
+      paper: 'https://github.com/omron-sinicx/PeriodicMAPP/blob/master/paper.pdf',
+      projectpage: 'https://omron-sinicx.github.io/PeriodicMAPP/',
+    },
+  },
+  {
     authors: ['Mai Nishimura', 'Shohei Nobuhara', 'Ko Nishino'],
     title:
       'ViewBirdiformer: Learning to recover ground-plane crowd trajectories and ego-motion from a single ego-centric view',
