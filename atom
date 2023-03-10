@@ -4,13 +4,13 @@
     <subtitle>Blog</subtitle>
     <link href="/atom" rel="self" type="application/rss+xml"/>
     <link href="/" />
-    <updated>2023-03-05T19:16:57.502Z</updated>
+    <updated>2023-03-10T00:43:19.035Z</updated>
     <id>My Notion Blog</id>
     <entry>
       <id>/blog/performance-tips-for-gpu-computing</id>
       <title>References for GPU computeing (2)</title>
       <link href="/blog/performance-tips-for-gpu-computing"/>
-      <updated>2021-01-08T00:00:00.909Z</updated>
+      <updated>2021-01-08T00:00:00.784Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
           <p>個人的な NVIDIA GPU ポインタ集 : Performance Tips</p>
@@ -25,7 +25,7 @@
       <id>/blog/references-for-gpu-computing</id>
       <title>References for GPU computing (1)</title>
       <link href="/blog/references-for-gpu-computing"/>
-      <updated>2021-01-08T00:00:00.909Z</updated>
+      <updated>2021-01-08T00:00:00.785Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
           <p>個人的な NVIDIA GPU ポインタ集 : Installation / architectures</p>
@@ -40,7 +40,7 @@
       <id>/blog/build-your-nextjs-blog-with-notion-backend</id>
       <title>Next.js blog with a Notion backend</title>
       <link href="/blog/build-your-nextjs-blog-with-notion-backend"/>
-      <updated>2020-10-28T00:00:00.910Z</updated>
+      <updated>2020-10-28T00:00:00.785Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
           <p>Next.js + TypeScript + Notion (CMS) な個人サイト</p>
