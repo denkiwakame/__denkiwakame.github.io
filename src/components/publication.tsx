@@ -52,6 +52,19 @@ const papers = [
     },
   },
   {
+    authors: [
+      'Mutsuki Nakahara', 'Mai Nishimura', 'Yoshitaka Ushiku', 'Takayuki Nishio', 'Kazuki Maruta', 'Yu Nakayama', 'Daisuke Hisano'
+    ],
+    title:
+      'Edge Computing-Assisted DNN Image Recognition System With Progressive Image Retransmission',
+    journal:
+      'IEEE Access',
+    year: '2022',
+    links: {
+      paper: 'https://ieeexplore.ieee.org/abstract/document/9869327',
+    },
+  },
+  {
     authors: ['Mai Nishimura', 'Shohei Nobuhara', 'Ko Nishino'],
     title:
       'View Birdification in the Crowd: Ground-Plane Localization from Perceived Movements',
