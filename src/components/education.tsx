@@ -3,10 +3,10 @@ import contactStyles from '../styles/contact.module.css'
 
 const degrees = [
   {
-    title: 'Ph.D. student',
+    title: 'Ph.D. in informatics',
     university: 'Kyoto University',
     country: 'Japan',
-    year: '2020-present',
+    year: '2020-2023',
   },
   {
     title: 'M.E. in informatics',
