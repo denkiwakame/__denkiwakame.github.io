@@ -3,6 +3,16 @@ import contactStyles from '../styles/contact.module.css'
 
 const papers = [
   {
+    authors: ['Yuta Yoshitake', 'Mai Nishimura', 'Shohei Nobuhara', 'Ko Nishino'],
+    title:
+      'TransPoser: Transformer as an Optimizer for Joint Object Shape and Pose Estimation',
+    journal: 'arXiv preprint',
+    year: '2023',
+    links: {
+      paper: 'https://arxiv.org/abs/2303.13477',
+    },
+  },
+  {
     authors: ['Mai Nishimura', 'Shohei Nobuhara', 'Ko Nishino'],
     title:
       'InCrowdFormer: On-Ground Pedestrian World Model From Egocentric Views',
