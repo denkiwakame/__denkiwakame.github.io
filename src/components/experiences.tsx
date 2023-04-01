@@ -3,12 +3,19 @@ import contactStyles from '../styles/contact.module.css'
 
 const degrees = [
   {
-    jobtitle: 'Research Engineer',
+    jobtitle: 'Senior Researcher',
     institute: 'OMRON SINIC X',
     country: 'Japan',
     desc:
-      'Research on mobile robot navigaion and GPU-accelerated machine learning',
-    year: '2019-present',
+      'Research on mobile robot navigaion, 3D computer vision, and GPU-accelerated machine learning',
+    year: '2023-present',
+  },
+  {
+    jobtitle: 'Research Engineer',
+    institute: 'OMRON SINIC X',
+    country: 'Japan',
+    desc: 'Research on mobile robot navigation and 3D computer vision',
+    year: '2019-2023',
   },
   {
     jobtitle: 'Senior Software Engineer',
@@ -27,7 +34,7 @@ const degrees = [
     year: '2015-2017',
   },
   {
-    jobtitle: 'Part-time Engineer',
+    jobtitle: 'Part-time Web Application Engineer',
     institute: 'Hatena',
     country: 'Japan',
     desc: 'Backend/Frontend web application development at Hatena Blog Team',

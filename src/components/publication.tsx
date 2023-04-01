@@ -3,13 +3,23 @@ import contactStyles from '../styles/contact.module.css'
 
 const papers = [
   {
-    authors: ['Kazumi Kasaura', 'Ryo Yonetani', 'Mai Nishimura'],
+    authors: ['Mai Nishimura', 'Shohei Nobuhara', 'Ko Nishino'],
     title:
-      'Periodic Multi-Agent Path Planning',
+      'View Birdification in the Crowd: Ground-Plane Localization from Perceived Movements',
+    journal: 'International Journal of Computer Vision (IJCV)',
+    year: '2023',
+    links: {
+      paper: 'https://arxiv.org/abs/2111.05060v2',
+    },
+  },
+  {
+    authors: ['Kazumi Kasaura', 'Ryo Yonetani', 'Mai Nishimura'],
+    title: 'Periodic Multi-Agent Path Planning',
     journal: 'AAAI Conference on Artificial Intelligence (AAAI)',
     year: '2023',
     links: {
-      paper: 'https://github.com/omron-sinicx/PeriodicMAPP/blob/master/paper.pdf',
+      paper:
+        'https://github.com/omron-sinicx/PeriodicMAPP/blob/master/paper.pdf',
       projectpage: 'https://omron-sinicx.github.io/PeriodicMAPP/',
     },
   },
@@ -53,12 +63,17 @@ const papers = [
   },
   {
     authors: [
-      'Mutsuki Nakahara', 'Mai Nishimura', 'Yoshitaka Ushiku', 'Takayuki Nishio', 'Kazuki Maruta', 'Yu Nakayama', 'Daisuke Hisano'
+      'Mutsuki Nakahara',
+      'Mai Nishimura',
+      'Yoshitaka Ushiku',
+      'Takayuki Nishio',
+      'Kazuki Maruta',
+      'Yu Nakayama',
+      'Daisuke Hisano',
     ],
     title:
       'Edge Computing-Assisted DNN Image Recognition System With Progressive Image Retransmission',
-    journal:
-      'IEEE Access',
+    journal: 'IEEE Access',
     year: '2022',
     links: {
       paper: 'https://ieeexplore.ieee.org/abstract/document/9869327',
