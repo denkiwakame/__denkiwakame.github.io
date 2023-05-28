@@ -15,11 +15,11 @@ const papers = [
   {
     authors: ['Hikaru Asano', 'Ryo Yonetani', 'Mai Nishimura', 'Tadashi Kozuno'],
     title:
-      'https://arxiv.org/abs/2305.11465',
+      'Counterfactual Fairness Filter fo Fair-Delay Multi-Robot Navigation',
     year: '2023',
     journal: 'International Conference on Autonomous Agents and Multi-Agent Systems (AAMAS)',
     links: {
-      paper: 'https://arxiv.org/abs/2111.05060v2',
+      paper: 'https://arxiv.org/abs/2305.11465',
       projectpage: 'https://omron-sinicx.github.io/ncf2/',
     },
   },
