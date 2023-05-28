@@ -3,6 +3,27 @@ import contactStyles from '../styles/contact.module.css'
 
 const papers = [
   {
+    authors: ['Kohei Honda', 'Ryo Yonetani', 'Mai Nishimura', 'Tadashi Kozuno'],
+    title:
+      'When to Replan? An Adaptive Replanning Strategy for Autonomous Navigation using Deep Reinforcement Learning',
+    year: '2023',
+    journal: 'arXiv',
+    links: {
+      paper: 'https://arxiv.org/abs/2304.12046',
+    },
+  },
+  {
+    authors: ['Hikaru Asano', 'Ryo Yonetani', 'Mai Nishimura', 'Tadashi Kozuno'],
+    title:
+      'https://arxiv.org/abs/2305.11465',
+    year: '2023',
+    journal: 'International Conference on Autonomous Agents and Multi-Agent Systems (AAMAS)',
+    links: {
+      paper: 'https://arxiv.org/abs/2111.05060v2',
+      projectpage: 'https://omron-sinicx.github.io/ncf2/',
+    },
+  },
+  {
     authors: ['Mai Nishimura', 'Shohei Nobuhara', 'Ko Nishino'],
     title:
       'View Birdification in the Crowd: Ground-Plane Localization from Perceived Movements',
