@@ -4,51 +4,6 @@
     <subtitle>Blog</subtitle>
     <link href="/atom" rel="self" type="application/rss+xml"/>
     <link href="/" />
-    <updated>2023-05-28T11:41:30.718Z</updated>
+    <updated>2023-06-25T08:18:26.308Z</updated>
     <id>My Notion Blog</id>
-    <entry>
-      <id>/blog/performance-tips-for-gpu-computing</id>
-      <title>References for GPU computeing (2)</title>
-      <link href="/blog/performance-tips-for-gpu-computing"/>
-      <updated>2021-01-08T00:00:00.987Z</updated>
-      <content type="xhtml">
-        <div xmlns="http://www.w3.org/1999/xhtml">
-          <p>個人的な NVIDIA GPU ポインタ集 : Performance Tips</p>
-          <p class="more">
-            <a href="/blog/performance-tips-for-gpu-computing">Read more</a>
-          </p>
-        </div>
-      </content>
-      <author><name>Mai Nishimura</name></author>
-    </entry>
-    <entry>
-      <id>/blog/references-for-gpu-computing</id>
-      <title>References for GPU computing (1)</title>
-      <link href="/blog/references-for-gpu-computing"/>
-      <updated>2021-01-08T00:00:00.987Z</updated>
-      <content type="xhtml">
-        <div xmlns="http://www.w3.org/1999/xhtml">
-          <p>個人的な NVIDIA GPU ポインタ集 : Installation / architectures</p>
-          <p class="more">
-            <a href="/blog/references-for-gpu-computing">Read more</a>
-          </p>
-        </div>
-      </content>
-      <author><name>Mai Nishimura</name></author>
-    </entry>
-    <entry>
-      <id>/blog/build-your-nextjs-blog-with-notion-backend</id>
-      <title>Next.js blog with a Notion backend</title>
-      <link href="/blog/build-your-nextjs-blog-with-notion-backend"/>
-      <updated>2020-10-28T00:00:00.987Z</updated>
-      <content type="xhtml">
-        <div xmlns="http://www.w3.org/1999/xhtml">
-          <p>Next.js + TypeScript + Notion (CMS) な個人サイト</p>
-          <p class="more">
-            <a href="/blog/build-your-nextjs-blog-with-notion-backend">Read more</a>
-          </p>
-        </div>
-      </content>
-      <author><name>Mai Nishimura</name></author>
-    </entry>
   </feed>
