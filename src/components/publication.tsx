@@ -1,17 +1,6 @@
 import sharedStyles from '../styles/shared.module.css'
-import contactStyles from '../styles/contact.module.css'
 
 const papers = [
-  {
-    authors: ['Kohei Honda', 'Ryo Yonetani', 'Mai Nishimura', 'Tadashi Kozuno'],
-    title:
-      'When to Replan? An Adaptive Replanning Strategy for Autonomous Navigation using Deep Reinforcement Learning',
-    year: '2023',
-    journal: 'arXiv',
-    links: {
-      paper: 'https://arxiv.org/abs/2304.12046',
-    },
-  },
   {
     authors: [
       'Hikaru Asano',

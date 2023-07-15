@@ -1,10 +1,8 @@
-import Link from 'next/link'
 import Header from '../components/header'
-import ExtLink from '../components/ext-link'
-import Features from '../components/features'
 import Education from '../components/education'
 import Experiences from '../components/experiences'
 import Publications from '../components/publication'
+import Preprints from '../components/preprints'
 import AcademicService from '../components/academic'
 
 export default () => (
@@ -14,6 +12,7 @@ export default () => (
       <Experiences />
       <Education />
       <Publications />
+      <Preprints />
       <AcademicService />
     </div>
   </>
