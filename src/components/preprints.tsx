@@ -2,6 +2,16 @@ import sharedStyles from '../styles/shared.module.css'
 
 const papers = [
   {
+    authors: ['So Kuroki', 'Mai Nishimura', 'Tadashi Kozuno'],
+    title:
+      'Multi-Agent Behavior Retrieval: Retrieval-Augmented Policy Training for Cooperative Manipulation by Mobile Robots',
+    year: '2023',
+    journal: 'arXiv',
+    links: {
+      paper: 'https://arxiv.org/abs/2312.02008',
+    },
+  },
+  {
     authors: ['Mai Nishimura', 'Shohei Nobuhara', 'Ko Nishino'],
     title:
       'InCrowdFormer: On-Ground Pedestrian World Model From Egocentric Views',
