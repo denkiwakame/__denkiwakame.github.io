@@ -3,6 +3,34 @@ import sharedStyles from '../styles/shared.module.css'
 const papers = [
   {
     authors: [
+      'Sosuke Ichihashi',
+      'So Kuroki',
+      'Mai Nishimura',
+      'Kazumi Kasaura',
+      'Takefumi Hiraki',
+      'Kazutoshi Tanaka',
+      'Shigeo Yoshida',
+    ],
+    title: 'Swarm Body: Embodied Swarm Robots',
+    journal: 'ACM Conference on Human Factors in Computing Systems (CHI)',
+    year: '2024',
+    links: {
+      paper: 'https://doi.org/10.1145/3613904.3642870',
+      arxiv: 'https://arxiv.org/abs/2402.15830',
+    },
+  },
+  {
+    authors: ['Kohei Honda', 'Ryo Yonetani', 'Mai Nishimura', 'Tadashi Kozuno'],
+    title:
+      'When to Replan? An Adaptive Replanning Strategy for Autonomous Navigation using Deep Reinforcement Learning',
+    journal: 'International Conference on Robotics and Automation (ICRA)',
+    year: '2024',
+    links: {
+      paper: 'https://arxiv.org/abs/2304.12046',
+    },
+  },
+  {
+    authors: [
       'Hikaru Asano',
       'Ryo Yonetani',
       'Mai Nishimura',

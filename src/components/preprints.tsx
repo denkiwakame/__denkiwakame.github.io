@@ -36,16 +36,6 @@ const papers = [
       paper: 'https://arxiv.org/abs/2303.13477',
     },
   },
-  {
-    authors: ['Kohei Honda', 'Ryo Yonetani', 'Mai Nishimura', 'Tadashi Kozuno'],
-    title:
-      'When to Replan? An Adaptive Replanning Strategy for Autonomous Navigation using Deep Reinforcement Learning',
-    year: '2023',
-    journal: 'arXiv',
-    links: {
-      paper: 'https://arxiv.org/abs/2304.12046',
-    },
-  },
 ]
 
 export default () => (
