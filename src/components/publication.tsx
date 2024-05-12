@@ -27,6 +27,7 @@ const papers = [
     year: '2024',
     links: {
       paper: 'https://arxiv.org/abs/2304.12046',
+      projectpage: 'https://omron-sinicx.github.io/when2replan/',
     },
   },
   {
