@@ -19,6 +19,10 @@
   --accents-6: #83a598;
   --accents-2: #87af87;
   --accents-8: #af5f5f;
+  --faded-1: #076678;
+  --faded-2: #005f87;
+  --faded-3: #8f3f71;
+  --faded-4: #79740e;
   --geist-foreground: #000;
 
   --radius: 8px;
@@ -52,10 +56,23 @@ body {
   min-height: 100vh;
   background: var(--bg);
   color: var(--fg);
-  font-family: 'Fira Sans', Ubuntu Mono, -apple-system, BlinkMacSystemFont,
-    Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
-    Helvetica Neue, sans-serif;
-  background-position: 0 0, 25px 25px;
+  font-family:
+    'Fira Sans',
+    Ubuntu Mono,
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    Fira Sans,
+    Droid Sans,
+    Helvetica Neue,
+    sans-serif;
+  background-position:
+    0 0,
+    25px 25px;
   background-attachment: fixed;
   background-size: 50px 50px;
 
@@ -290,14 +307,14 @@ mark {
 
 h1 {
   margin: var(--gap-double) 0 calc(0.5 * var(--gap)) 0;
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 800;
   letter-spacing: -0.05rem;
   color: var(--fg-3);
 }
 
 h2 {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 800;
   letter-spacing: -0.02rem;
   color: var(--accents-3);
@@ -313,7 +330,7 @@ h3 {
   transform: translateX(-50%);
   margin-left: 50%;
   text-align: center;
-  cursor: pointer;
+  cursor: default;
 }
 .video :global(video) {
   max-width: 100%;
@@ -436,7 +453,7 @@ footer span:nth-child(3) a {
   color: var(--accents-1);
 }
 .highlight-blue {
-  color: var(--accents-2);
+  color: var(--accents-6);
 }
 .highlight-gray {
   color: var(--fg-1);
@@ -445,4 +462,13 @@ footer span:nth-child(3) a {
   font-weight: bolder;
   color: var(--fg-2);
   /* background-color: var(--fg-2); */
+}
+.resource-btn {
+  color: #fff;
+  cursor: default;
+  background-color: var(--faded-1);
+}
+.resource-btn:hover {
+  cursor: default;
+  background-color: var(--faded-2);
 }

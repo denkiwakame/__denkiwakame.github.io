@@ -1,16 +1,7 @@
 import sharedStyles from '../styles/shared.module.css'
+import Resource from '../components/resource.tsx'
 
 const papers = [
-  {
-    authors: ['So Kuroki', 'Mai Nishimura', 'Tadashi Kozuno'],
-    title:
-      'Multi-Agent Behavior Retrieval: Retrieval-Augmented Policy Training for Cooperative Manipulation by Mobile Robots',
-    year: '2023',
-    journal: 'arXiv',
-    links: {
-      paper: 'https://arxiv.org/abs/2312.02008',
-    },
-  },
   {
     authors: ['Mai Nishimura', 'Shohei Nobuhara', 'Ko Nishino'],
     title:
@@ -47,7 +38,7 @@ export default () => (
           <div className={sharedStyles.pub}>
             <p>
               <span className="highlight-gray">
-                {authors.map(author => {
+                {authors.map((author) => {
                   return author == 'Mai Nishimura' ? (
                     <span>
                       <b className="highlight-blue">
@@ -68,11 +59,7 @@ export default () => (
               </span>
               <br />
               {Object.entries(links).map(([key, val]) => {
-                return (
-                  <a href={val} target="_blank" className="highlight">
-                    [{key}]{' '}
-                  </a>
-                )
+                return <Resource title={key} url={val} />
               })}
             </p>
           </div>

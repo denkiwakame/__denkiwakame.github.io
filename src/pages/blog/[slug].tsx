@@ -1,10 +1,9 @@
 import Link from 'next/link'
-import fetch from 'node-fetch'
 import { useRouter } from 'next/router'
 import Header from '../../components/header'
 import Heading from '../../components/heading'
 import components from '../../components/dynamic'
-import ReactJSXParser from '@zeit/react-jsx-parser'
+import ReactJSXParser from 'react-jsx-parser'
 import blogStyles from '../../styles/blog.module.css'
 import { textBlock } from '../../lib/notion/renderers'
 import getPageData from '../../lib/notion/getPageData'
@@ -12,9 +11,7 @@ import React, { CSSProperties, useEffect } from 'react'
 import getBlogIndex from '../../lib/notion/getBlogIndex'
 import getNotionUsers from '../../lib/notion/getNotionUsers'
 import { getBlogLink, getAbsBlogLink, getDateStr } from '../../lib/blog-helpers'
-import minimatch from 'minimatch'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar } from '@fortawesome/free-solid-svg-icons'
+import { FaStar } from 'react-icons/fa'
 import {
   HatenaShareButton,
   TwitterShareButton,
@@ -67,7 +64,8 @@ export async function getStaticProps({ params: { slug }, preview }) {
     } else if (type == 'bookmark') {
       // FIXME
       const src = properties.link[0][0]
-      if (!minimatch(src, 'https://github.com/**/**')) continue
+      const githubRepoPtn = /^https:\/\/github\.com\/[^/]+\/[^/]+$/
+      if (!githubRepoPtn.test(src)) continue
       const userId = src.split('/')[3]
       const repoId = src.split('/')[4]
 
@@ -87,7 +85,7 @@ export async function getStaticProps({ params: { slug }, preview }) {
   }
 
   const { users } = await getNotionUsers(post.Authors || [])
-  post.Authors = Object.keys(users).map(id => users[id].full_name)
+  post.Authors = Object.keys(users).map((id) => users[id].full_name)
 
   return {
     props: {
@@ -106,15 +104,15 @@ export async function getStaticPaths() {
   // for actually published ones
   return {
     paths: Object.keys(postsTable)
-      .filter(post => postsTable[post].Published === 'Yes')
-      .map(slug => getBlogLink(slug)),
+      .filter((post) => postsTable[post].Published === 'Yes')
+      .map((slug) => getBlogLink(slug)),
     fallback: false,
   }
 }
 
 const listTypes = new Set(['bulleted_list', 'numbered_list'])
 
-const getDomain = src => {
+const getDomain = (src) => {
   const url = new URL(src)
   return url.hostname
 }
@@ -260,10 +258,10 @@ const RenderPost = ({ post, redirect, preview }) => {
                 React.createElement(
                   listTagName,
                   { key: listLastId! },
-                  Object.keys(listMap).map(itemId => {
+                  Object.keys(listMap).map((itemId) => {
                     if (listMap[itemId].isNested) return null
 
-                    const createEl = item =>
+                    const createEl = (item) =>
                       React.createElement(
                         components.li || 'ul',
                         { key: item.key },
@@ -272,7 +270,7 @@ const RenderPost = ({ post, redirect, preview }) => {
                           ? React.createElement(
                               components.ul || 'ul',
                               { key: item + 'sub-list' },
-                              item.nested.map(nestedId =>
+                              item.nested.map((nestedId) =>
                                 createEl(listMap[nestedId])
                               )
                             )
@@ -384,7 +382,7 @@ const RenderPost = ({ post, redirect, preview }) => {
                         >
                           {properties.language}
                         </span>
-                        <FontAwesomeIcon icon={faStar} size="xs" width="8" />
+                        <FaStar size="1em" width="8" />
                         <span
                           style={{
                             fontSize: '0.55rem',
@@ -448,9 +446,11 @@ const RenderPost = ({ post, redirect, preview }) => {
                 const roundFactor = Math.pow(10, 2)
                 // calculate percentages
                 const width = block_width
-                  ? `${Math.round(
-                      (block_width / baseBlockWidth) * 100 * roundFactor
-                    ) / roundFactor}%`
+                  ? `${
+                      Math.round(
+                        (block_width / baseBlockWidth) * 100 * roundFactor
+                      ) / roundFactor
+                    }%`
                   : block_height || '100%'
 
                 const isImage = type === 'image'

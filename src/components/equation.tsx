@@ -1,17 +1,10 @@
-import { renderToString, ParseError } from 'katex'
+import katex from 'katex'
 
 function render(expression: string, displayMode: boolean): string {
-  let result: string
-  try {
-    result = renderToString(expression, { displayMode: displayMode })
-  } catch (e) {
-    if (e instanceof ParseError) {
-      result = e.message
-    }
-    if (process.env.NODE_ENV !== 'production') {
-      console.error(e)
-    }
-  }
+  const result: string = katex.renderToString(expression, {
+    throwOnError: false,
+    displayMode: displayMode,
+  })
   return result
 }
 

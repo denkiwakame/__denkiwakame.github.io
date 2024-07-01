@@ -1,4 +1,3 @@
-import fetch, { Response } from 'node-fetch'
 import { API_ENDPOINT, NOTION_TOKEN } from './server-constants'
 
 export default async function rpc(fnName: string, body: any) {
@@ -42,7 +41,7 @@ export function getBodyOrNull(res: Response) {
 export function values(obj: any) {
   const vals: any = []
 
-  Object.keys(obj).forEach(key => {
+  Object.keys(obj).forEach((key) => {
     vals.push(obj[key])
   })
   return vals

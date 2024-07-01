@@ -1,6 +1,34 @@
 import sharedStyles from '../styles/shared.module.css'
+import Resource from '../components/resource.tsx'
 
 const papers = [
+  {
+    authors: ['So Kuroki', 'Mai Nishimura', 'Tadashi Kozuno'],
+    title:
+      'Multi-Agent Behavior Retrieval: Retrieval-Augmented Policy Training for Cooperative Manipulation by Mobile Robots',
+    year: '2024',
+    journal:
+      'International Conference on Intelligent Robots and Systems (IROS)',
+    links: {
+      paper: 'https://arxiv.org/abs/2312.02008',
+    },
+  },
+  {
+    authors: [
+      'Michikuni Eguchi',
+      'Mai Nishimura',
+      'Shigeo Yoshida',
+      'Takefumi Hiraki',
+    ],
+    title:
+      'Robot Swarm Control Based on Smoothed Particle Hydrodynamics for Obstacle-Unaware Navigation',
+    year: '2024',
+    journal:
+      'International Conference on Intelligent Robots and Systems (IROS)',
+    links: {
+      paper: 'https://arxiv.org/abs/2404.16309',
+    },
+  },
   {
     authors: [
       'Sosuke Ichihashi',
@@ -27,7 +55,7 @@ const papers = [
     year: '2024',
     links: {
       paper: 'https://arxiv.org/abs/2304.12046',
-      projectpage: 'https://omron-sinicx.github.io/when2replan/',
+      project: 'https://omron-sinicx.github.io/when2replan/',
     },
   },
   {
@@ -44,7 +72,7 @@ const papers = [
       'International Conference on Autonomous Agents and Multi-Agent Systems (AAMAS)',
     links: {
       paper: 'https://arxiv.org/abs/2305.11465',
-      projectpage: 'https://omron-sinicx.github.io/ncf2/',
+      project: 'https://omron-sinicx.github.io/ncf2/',
     },
   },
   {
@@ -66,7 +94,7 @@ const papers = [
     links: {
       paper:
         'https://github.com/omron-sinicx/PeriodicMAPP/blob/master/paper.pdf',
-      projectpage: 'https://omron-sinicx.github.io/PeriodicMAPP/',
+      project: 'https://omron-sinicx.github.io/PeriodicMAPP/',
     },
   },
   {
@@ -87,7 +115,7 @@ const papers = [
     year: '2022',
     links: {
       paper: 'https://ieeexplore.ieee.org/document/9811344',
-      projectpage: 'https://omron-sinicx.github.io/PSIPP-CTC/',
+      project: 'https://omron-sinicx.github.io/PSIPP-CTC/',
     },
   },
   {
@@ -104,7 +132,7 @@ const papers = [
     year: '2022',
     links: {
       paper: 'https://arxiv.org/abs/2201.09467',
-      projectpage: 'https://omron-sinicx.github.io/ctrm/',
+      project: 'https://omron-sinicx.github.io/ctrm/',
     },
   },
   {
@@ -148,7 +176,7 @@ const papers = [
     year: '2021',
     links: {
       paper: 'https://arxiv.org/abs/2009.07476',
-      projectpage: 'https://omron-sinicx.github.io/neural-astar/',
+      project: 'https://omron-sinicx.github.io/neural-astar/',
     },
   },
   {
@@ -191,7 +219,7 @@ const papers = [
     year: '2020',
     links: {
       paper: 'https://arxiv.org/abs/2003.09207',
-      projectpage: 'https://denkiwakame.github.io/l2b',
+      project: 'https://denkiwakame.github.io/l2b',
     },
   },
   {
@@ -259,11 +287,7 @@ export default () => (
               </span>
               <br />
               {Object.entries(links).map(([key, val]) => {
-                return (
-                  <a href={val} target="_blank" className="highlight">
-                    [{key}]{' '}
-                  </a>
-                )
+                return <Resource title={key} url={val} />
               })}
             </p>
           </div>
